@@ -164,7 +164,7 @@
     display: inline-block;
     position: relative; }
     .header-style-2 .desktop-menu ul li a {
-      padding: 18px 20px;
+      padding: 16px 10px;
       display: inline-block;
       color: #ffffff;
       text-decoration: none;
@@ -199,7 +199,6 @@
       content: '+';
       position: absolute;
       top: 50%;
-      right: 9px;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
@@ -8579,15 +8578,14 @@ i {
       text-align: center; } }
 
 .home2-pmv-section .pmv-bottom {
-  margin-top: 30px;
-  padding: 0 80px; }
+  margin-top: 30px; }
   .home2-pmv-section .pmv-bottom .pmv-nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-around;
     position: relative; }
     .home2-pmv-section .pmv-bottom .pmv-nav ul::after {
       content: '';
@@ -8598,8 +8596,8 @@ i {
       height: 1px;
       background-color: #eaeaea; }
     .home2-pmv-section .pmv-bottom .pmv-nav ul li {
-      display: block;
-      width: 33%; }
+        display: block;
+    }
       .home2-pmv-section .pmv-bottom .pmv-nav ul li a {
         text-align: center;
         display: block;

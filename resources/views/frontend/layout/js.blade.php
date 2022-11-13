@@ -8,3 +8,4 @@
         <script src="/frontend/js/vendor/rbtools.min.js"></script>
         <script src="/frontend/js/vendor/rs6.min.js"></script>
         <script src="/frontend/js/main.js"></script>
+

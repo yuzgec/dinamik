@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
     public function index(){
         SEOMeta::setTitle('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
@@ -62,7 +63,7 @@ class HomeController extends Controller
 
     }
 
-    public function solutionsdetail($url){
+    public function solutiondetail($url){
 
         $Detay = Service::where('slug', '=', $url)->firstOrFail();
         SEOMeta::setTitle($Detay->title.' | Online Destek | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
@@ -81,5 +82,19 @@ class HomeController extends Controller
         return view('frontend.corporate.detail', compact('Detay'));
 
     }
+
+
+
+    public function sectordetails($url){
+
+        $Detay = Service::where('slug', '=', $url)->firstOrFail();
+        SEOMeta::setTitle($Detay->title.' | Online Destek | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setCanonical(url()->full());
+        return view('frontend.service.sectordetail', compact('Detay'));
+
+    }
+
+
 
 }

@@ -6,7 +6,7 @@
             <div class="breadcrumb-content">
                 <h1>{{ $Detay->title }}</h1>
                 <a href="/dinamik">Anasayfa <i class="fas fa-angle-double-right"></i></a>
-                <a href="/dinamik">Hizmetlerimiz <i class="fas fa-angle-double-right"></i></a>
+                <a href="/dinamik">Sektörler <i class="fas fa-angle-double-right"></i></a>
                 <span>{{ $Detay->title }}</span>
             </div>
         </div>
@@ -19,22 +19,22 @@
                     <div class="sr-sidebar">
 
                         @foreach($ServiceCategory as $item)
-                        <div class="sidebar-widget sr-list-widget">
-                            <div class="widget-title">
-                                <h5>{{ $item->title }}</h5>
+                            <div class="sidebar-widget sr-list-widget">
+                                <div class="widget-title">
+                                    <h5>{{ $item->title }}</h5>
+                                </div>
+                                <div class="list-nav">
+                                    <ul>
+                                        @foreach($item->getService as $row)
+                                            <li>
+                                                <a href="{{ route(service($item->id), $row->slug) }}" title="{{ $row->title }}">
+                                                    {{ $row->title }}
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="list-nav">
-                                <ul>
-                                    @foreach($item->getService as $row)
-                                        <li>
-                                            <a href="{{ route(service($item->id), $row->slug) }}" title="{{ $row->title }}">
-                                                {{ $row->title }}
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
                         @endforeach
                         <div class="sidebar-widget sr-list-widget">
                             <div class="widget-title">
@@ -68,23 +68,23 @@
                 <div class="col-12 mt-5">
                     <div class="srv2-service-section row  pb-30">
                         @foreach($Features as $item)
-                        <div class="col-lg-4 col-sm-6">
-                                    <div class="srv2-item">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="srv2-item">
+
+                                    <div class="srv2-service-content">
+                                        <h5>{{ $item->title }}</h5>
+                                        {!! $item->desc !!}
+                                    </div>
+                                    <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
 
                                         <div class="srv2-service-content">
                                             <h5>{{ $item->title }}</h5>
                                             {!! $item->desc !!}
-                                        </div>
-                                        <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
-
-                                            <div class="srv2-service-content">
-                                                <h5>{{ $item->title }}</h5>
-                                                {!! $item->desc !!}
-                                                <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
-                                            </div>
+                                            <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         @endforeach
                     </div>
 
@@ -93,4 +93,4 @@
         </div>
     </section>
 
-    @endsection
+@endsection

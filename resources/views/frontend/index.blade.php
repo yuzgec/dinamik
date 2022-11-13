@@ -1,7 +1,27 @@
 @extends('frontend.layout.app')
 @section('content')
     @include('frontend.layout.slider')
-    <div class="home7-booking-form">
+
+    <div class="get-in-touch">
+        <div class="container">
+            <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(/frontend/images/home6/git-bg.jpg;);">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="git-left">
+                            <h4 class="text-white">Hizmetlerimizden faydalanmak için hemen arayın!</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="git-btn home6-secondary-btn">
+                            <a href="#"><span><i class="flaticonv2 flaticonv2-telephone-call"></i></span>0216 465 45 70 </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{--    <div class="home7-booking-form">
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-1"></div>
@@ -20,7 +40,7 @@
 
             </div>
         </div>
-    </div>
+    </div>--}}
 
 
     <section class="home6-pricing-table pt-10 pb-10">
@@ -195,8 +215,8 @@
                             </div>
                         </div>
                         <div class="mt-5">
-                            <a href="contact.html" class="btn btn-primary">Hizmetlerimiz</a>
-                            <a href="contact.html" class="btn btn-primary">İletişim</a>
+                            <a href="{{ route('service') }}" class="btn btn-primary">Hizmetlerimiz</a>
+                            <a href="{{ route('contactus') }}" class="btn btn-primary">İletişim</a>
                         </div>
                     </div>
 
@@ -239,11 +259,12 @@
                 </div>
             </div>
             <div class="row">
+                @foreach($Service as $item)
                 <div class="col-lg-4 col-sm-6">
                     <div class="srv2-item">
 
                         <div class="srv2-service-content">
-                            <h5>SMS Hizmeti</h5>
+                            <h5>{{ $item->title }}</h5>
                             <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
                         </div>
                         <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
@@ -256,96 +277,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="srv2-item">
+                @endforeach
 
-                        <div class="srv2-service-content">
-                            <h5>SMS Hizmeti</h5>
-                            <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
-                        </div>
-                        <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
-
-                            <div class="srv2-service-content">
-                                <a href="#"><h5>SMS Hizmeti</h5></a>
-                                <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
-                                <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="srv2-item">
-
-                        <div class="srv2-service-content">
-                            <h5>SMS Hizmeti</h5>
-                            <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
-                        </div>
-                        <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
-
-                            <div class="srv2-service-content">
-                                <a href="#"><h5>SMS Hizmeti</h5></a>
-                                <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
-                                <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="srv2-item">
-
-                        <div class="srv2-service-content">
-                            <h5>SMS Hizmeti</h5>
-                            <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
-                        </div>
-                        <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
-
-                            <div class="srv2-service-content">
-                                <a href="#"><h5>SMS Hizmeti</h5></a>
-                                <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
-                                <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="srv2-item">
-
-                        <div class="srv2-service-content">
-                            <h5>SMS Hizmeti</h5>
-                            <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
-                        </div>
-                        <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
-
-                            <div class="srv2-service-content">
-                                <a href="#"><h5>SMS Hizmeti</h5></a>
-                                <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
-                                <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="srv2-item">
-
-                        <div class="srv2-service-content">
-                            <h5>SMS Hizmeti</h5>
-                            <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
-                        </div>
-                        <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
-
-                            <div class="srv2-service-content">
-                                <a href="#"><h5>SMS Hizmeti</h5></a>
-                                <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
-                                <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="bixol-service-section pb-70">
+    <section class="bixol-service-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4">
@@ -427,25 +365,42 @@
         </div>
     </section>
 
-
-    <div class="get-in-touch">
+    <section class="home2-pmv-section">
         <div class="container">
-            <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(/frontend/images/home6/git-bg.jpg;);">
-                <div class="row align-items-center">
-                    <div class="col-lg-8 col-md-6">
-                        <div class="git-left">
-                            <h4 class="text-white">Hizmetlerimizden faydalanmak için hemen arayın!</h4>
+            <div class="pmv-bottom">
+
+                <div class="pmv-nav">
+                    <ul class="nav" >
+                        @foreach($Service->where('category', 3) as $item)
+                        <li><a href="#{{ $item->slug }}" data-bs-toggle="tab" class="@if ($loop->first) active @endif">{{ $item->title }}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+
+                <div class="tab-content">
+                    @foreach($Service->where('category', 3) as $item)
+                    <div class="tab-pane fade  @if ($loop->first) active show @endif" id="{{ $item->slug }}">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 order-2 order-lg-1">
+                                <div class="pmv-content">
+                                    <h4>{{ $item->title }}</h4>
+                                    <p>We know that if you love our service you’re going to recommend us to your family and friends, so your satisfaction is our number one priority. If you’re unhappy with our service in any way.</p>
+                                    <a href="#" class="bixol-primary-btn">View terms of services</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2">
+                                <div class="img-wrapper">
+                                    <img src="/frontend/images/home2/tab-1.jpg" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="git-btn home6-secondary-btn">
-                            <a href="#"><span><i class="flaticonv2 flaticonv2-telephone-call"></i></span>0216 465 45 70 </a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 
     <section class="home2-faq-area pt-20 pb-30">
         <div class="container">
@@ -684,12 +639,12 @@
                     sliderLayout:"fullwidth",
                     visibilityLevels:"1240,1024,778,480",
                     gridwidth:"1230,1024,778,480",
-                    gridheight:"600,600,600,540",
+                    gridheight:"500,500,500,540",
                     spinner:"spinner0",
                     perspective:600,
                     perspectiveType:"global",
                     keepBPHeight:true,
-                    editorheight:"600,600,600,540",
+                    editorheight:"500,500,500,540",
                     responsiveLevels:"1240,1024,778,480",
                     progressBar:{disableProgressBar:true},
                     navigation: {

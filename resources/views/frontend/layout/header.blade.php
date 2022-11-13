@@ -54,7 +54,7 @@
                                             <ul>
                                                 @foreach($item->getService->sortBy('rank') as $row)
                                                 <li>
-                                                    <a href="{{ route(($item->id == 1 ) ?  'servicedetail' : 'solutiondetail' , $row->slug) }}">
+                                                    <a href="{{ route(service($item->id), $row->slug) }}">
                                                         {{ $row->title }}
                                                     </a>
                                                 </li>
@@ -62,10 +62,9 @@
                                             </ul>
                                         </li>
                                         @endforeach
-
-                                        <li><a href="{{ route('support') }}">DESTEK</a></li>
                                         <li><a href="{{ route('price') }}">Fiyatlar</a></li>
                                         <li><a href="{{ route('contactus') }}">Bize Ulaşın</a></li>
+                                        <li><a href="{{ route('contactus') }}">Giriş Yap</a></li>
                                     </ul>
                                 </nav>
                             </div>

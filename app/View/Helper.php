@@ -17,33 +17,17 @@
         }
     }
 
-    function condition($value){
-        if($value === 5){
-            echo 100;
-        }else if($value === 4){
-            echo 80;
-        }else if($value === 3){
-            echo 60;
-        }else if($value === 2){
-            echo 40;
-        }else if($value === 1){
-            echo 20;
+    function service($value){
+        if($value == 1){
+            return "servicedetail";
+        }else if($value == 2){
+            return "solutiondetail";
+        }else{
+            return "sectordetail";
         }
     }
 
-    function conditionText($value){
-        if($value === 5 ){
-            echo 'Yeni Gibi';
-        }else if($value === 4 ){
-            echo 'Çok İyi';
-        }else if($value === 3 ){
-            echo 'İyi';
-        }else if($value === 2 ){
-            echo 'Orta';
-        }else if($value === 1 ){
-            echo 'Kötü';
-        }
-    }
+
 
     //KULLANICI ADI BAŞ HARFLERİNİ GÖSTERME
     function isim($isim){

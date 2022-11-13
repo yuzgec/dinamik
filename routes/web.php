@@ -9,11 +9,11 @@ Route::get('/fiyatlar', [HomeController::class, 'price'])->name('price');
 Route::get('/destek', [HomeController::class, 'support'])->name('support');
 Route::get('/kurumsal', [HomeController::class, 'corporate'])->name('corporate');
 Route::get('/sayfa/{url}', [HomeController::class, 'corporatedetail'])->name('corporatedetail');
-
 Route::get('/hizmetlerimiz', [HomeController::class, 'service'])->name('service');
 Route::get('/hizmet/{url}', [HomeController::class, 'servicedetail'])->name('servicedetail');
 Route::get('/cozumlerimiz', [HomeController::class, 'solutions'])->name('solutions');
-Route::get('/cozumler/{url}', [HomeController::class, 'solutionsdetail'])->name('solutiondetail');
+Route::get('/cozumler/{url}', [HomeController::class, 'solutiondetail'])->name('solutiondetail');
+Route::get('/sektor/{url}', [HomeController::class, 'sectordetails'])->name('sectordetail');
 Route::get('/haberler', [HomeController::class, 'news'])->name('news');
 Route::get('/haber/{url}', [HomeController::class, 'newsdetail'])->name('newsdetail');
 Route::get('/bankahesapbilgileri', [HomeController::class, 'bankinfo'])->name('bankinfo');
