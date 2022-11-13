@@ -32,9 +32,13 @@ class ServiceCategory extends Model implements HasMedia
         return LogOptions::defaults()->logOnly(['title', 'slug']);
     }
 
-    function getCategoryCount()
+    public function getCategoryCount()
     {
         return $this->hasMany('App\Models\Service', 'category')->count();
+    }
+
+    public function getService(){
+        return $this->hasMany('App\Models\Service', 'category', 'id');
     }
 
     public function registerMediaConversions(Media $media = null): void

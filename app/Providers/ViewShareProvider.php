@@ -19,17 +19,12 @@ class ViewShareProvider extends ServiceProvider
             return Page::with('getCategory')->get();
         });
 
-        $Service = Cache::remember('service',now()->addYear(1), function () {
-            return Service::with('getCategory')->get();
-        });
-
         $ServiceCategory = Cache::remember('service_categories',now()->addYear(1), function () {
-            return ServiceCategory::all();
+            return ServiceCategory::select('id', 'title', 'slug', 'status')->with('getService')->where('status', '=', 1)->get();
         });
 
         View::share([
             'Pages' => $Pages,
-            'Service' => $Service,
             'ServiceCategory' => $ServiceCategory,
         ]);
     }

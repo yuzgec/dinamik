@@ -36,28 +36,31 @@
                                         <li><a href="{{ route('home') }}">Anasayfa</a> </li>
                                         <li class="has-submenu"><a href="#">Kurumsal</a>
                                             <ul>
-                                                <li><a href="/dinamik/sayfa-detay?name=Hakkımızda">Hakkımızda</a></li>
-                                                <li><a href="/dinamik/sayfa-detay?name=Lisans ve Sertfikasyon">Lisans ve Sertfikasyon</a></li>
-                                                <li><a href="/dinamik/sayfa-detay?name=Sözleşme ve Formlar">Sözleşme ve Formlar</a></li>
-                                                <li><a href="/dinamik/sayfa-detay?name=Bayilik Sistemi">Bayilik Sistemi</a></li>
-                                                <li><a href="/dinamik/sayfa-detay?name=Banka Hesap Bilgileri">Banka Hesap Bilgileri</a></li>
-                                                <li><a href="/dinamik/sayfa-detay?name=Blog ve Haberler">Blog ve Haberler</a></li>
+                                                @foreach($Pages as $item)
+                                                    <li>
+                                                        <a href="{{ route('corporatedetail',$item->slug) }}">
+                                                            {{ $item->title }}
+                                                        </a>
+                                                    </li>
+                                                @endforeach
+                                                <li><a href="{{ route('bankinfo') }}">Banka Hesap Bilgileri</a></li>
+                                                <li><a href="{{ route('sss') }}">Sıkça Sorulan Sorular</a></li>
+                                                <li><a href="{{ route('news') }}">Blog ve Haberler</a></li>
                                             </ul>
                                         </li>
-                                        <li class="has-submenu"><a href="#">SMS Hizmeti</a>
+                                        @foreach($ServiceCategory as $item)
+                                        <li class="has-submenu"><a href="#">{{ $item->title }}</a>
                                             <ul>
-                                                <li><a href="#">Toplu SMS</a></li>
-                                                <li><a href="#">OTP SMS</a></li>
+                                                @foreach($item->getService->sortBy('rank') as $row)
+                                                <li>
+                                                    <a href="{{ route(($item->id == 1 ) ?  'servicedetail' : 'solutiondetail' , $row->slug) }}">
+                                                        {{ $row->title }}
+                                                    </a>
+                                                </li>
+                                                @endforeach
                                             </ul>
                                         </li>
-                                        <li class="has-submenu"><a href="#">Çözümler</a>
-                                            <ul>
-                                                <li><a href="#">Yazılım Çözümleri</a></li>
-                                                <li><a href="#">Entegrasyon</a></li>
-                                                <li><a href="#">Özel Çözümler</a></li>
-                                                <li><a href="#">Sms Api</a></li>
-                                            </ul>
-                                        </li>
+                                        @endforeach
 
                                         <li><a href="{{ route('support') }}">DESTEK</a></li>
                                         <li><a href="{{ route('price') }}">Fiyatlar</a></li>
@@ -69,7 +72,7 @@
                         <div class="col-lg-2">
                             <div class="header-right">
                                 <div class="header-btn">
-                                    <a href="{{ route('signup') }}" class="home5-primary-btn">ÜYE OL<span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                                    <a href="#" class="home5-primary-btn">ÜYE OL<span><i class="fas fa-long-arrow-alt-right"></i></span></a>
                                 </div>
                                 <div class="bixol-mobile-hamburger">
                                     <span></span>

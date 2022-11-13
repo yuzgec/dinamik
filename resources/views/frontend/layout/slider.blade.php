@@ -3,7 +3,7 @@
 <rs-module-wrap id="rev_slider_3_1_wrapper" data-alias="home-3" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
     <rs-module id="rev_slider_3_1" data-version="6.5.7">
         <rs-slides>
-            <rs-slide style="position: absolute;" data-key="rs-7" data-title="Slide" data-thumb="frontend/bg-slider7-50x100.jpg" data-anim="ms:1000;r:0;" data-in="o:0;" data-out="a:false;">
+            <rs-slide style="position: absolute;" data-key="rs-7" data-title="Slide" data-thumb="frontend/images/banner.jpg" data-anim="ms:1000;r:0;" data-in="o:0;" data-out="a:false;">
                 <img src="frontend/images/banner.jpg" alt="bg-slider7" title="bg-slider7" width="1920" height="601" class="rev-slidebg tp-rs-img" data-parallax="8" data-panzoom="d:10000;ss:110%;se:100;" data-no-retina>
 
                 <rs-group

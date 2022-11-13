@@ -85,7 +85,6 @@
         </div>
     </section>
 
-    <div class="get-in-touch">
         <div class="container">
             <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(&quot;/frontend/images/home6/git-bg.jpg&quot;);">
                 <div class="row align-items-center">
@@ -100,7 +99,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <section class="srv2-service-section  pb-30">
         <div class="container">
@@ -300,6 +298,26 @@
         </div>
     </section>
 
+
+    <div class="get-in-touch">
+        <div class="container">
+            <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(/frontend/images/home6/git-bg.jpg;);">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="git-left">
+                            <h4 class="text-white">Hizmetlerimizden faydalanmak için hemen arayın!</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="git-btn home6-secondary-btn">
+                            <a href="#"><span><i class="flaticonv2 flaticonv2-telephone-call"></i></span>0216 465 45 70 </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="home2-faq-area pt-20 pb-30">
         <div class="container">
 
@@ -423,7 +441,6 @@
                         <img src="http://www.dinamiksms.com.tr/dinamiktoplusms/vestel.png" alt="" width="150px">
                     </div>
                 </div>
-                <div class="seperator"><hr></div>
             </div>
 
         </div>
@@ -442,8 +459,23 @@
                             <div class="price-area">
                                 <h2>99₺</h2>
                             </div>
+                            <div class="feature-list">
+                                <ul>
+                                    <li>Başlıklı Sms Gönderimi</li>
+                                    <li>Anlık Detaylı Raporlama</li>
+                                    <li>İletilmeyen İadesi</li>
+                                    <li>Heryöne Gönderim</li>
+                                    <li>Kolay Excel Aktarım</li>
+                                    <li>KDV Dahil</li>
+                                </ul>
+                            </div>
                             <div class="price-btn">
-                                <a href="#">Planı Seç</a>
+                                <a href="#" class="mb-1">Planı Seç</a>
+                            </div>
+                            <div class="header-btn">
+                                <a href="#" class="home5-primary-btn" style="width:170px">Bilgi Al
+                                    <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -456,8 +488,23 @@
                             <div class="price-area">
                                 <h2>399₺</h2>
                             </div>
+                            <div class="feature-list">
+                                <ul>
+                                    <li>Başlıklı Sms Gönderimi</li>
+                                    <li>Anlık Detaylı Raporlama</li>
+                                    <li>İletilmeyen İadesi</li>
+                                    <li>Heryöne Gönderim</li>
+                                    <li>Kolay Excel Aktarım</li>
+                                    <li>KDV Dahil</li>
+                                </ul>
+                            </div>
                             <div class="price-btn">
-                                <a href="#">Planı Seç</a>
+                                <a href="#" class="mb-1">Planı Seç</a>
+                            </div>
+                            <div class="header-btn">
+                                <a href="#" class="home5-primary-btn" style="width:170px">Bilgi Al
+                                    <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -470,8 +517,23 @@
                             <div class="price-area">
                                 <h2>1399₺</h2>
                             </div>
+                            <div class="feature-list">
+                                <ul>
+                                    <li>Başlıklı Sms Gönderimi</li>
+                                    <li>Anlık Detaylı Raporlama</li>
+                                    <li>İletilmeyen İadesi</li>
+                                    <li>Heryöne Gönderim</li>
+                                    <li>Kolay Excel Aktarım</li>
+                                    <li>KDV Dahil</li>
+                                </ul>
+                            </div>
                             <div class="price-btn">
-                                <a href="#">Planı Seç</a>
+                                <a href="#" class="mb-1">Planı Seç</a>
+                            </div>
+                            <div class="header-btn">
+                                <a href="#" class="home5-primary-btn" style="width:170px">Bilgi Al
+                                    <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -484,8 +546,23 @@
                             <div class="price-area">
                                 <h2>1399₺</h2>
                             </div>
+                            <div class="feature-list">
+                                <ul>
+                                    <li>Başlıklı Sms Gönderimi</li>
+                                    <li>Anlık Detaylı Raporlama</li>
+                                    <li>İletilmeyen İadesi</li>
+                                    <li>Heryöne Gönderim</li>
+                                    <li>Kolay Excel Aktarım</li>
+                                    <li>KDV Dahil</li>
+                                </ul>
+                            </div>
                             <div class="price-btn">
-                                <a href="#">Planı Seç</a>
+                                <a href="#" class="mb-1">Planı Seç</a>
+                            </div>
+                            <div class="header-btn">
+                                <a href="#" class="home5-primary-btn" style="width:170px">Bilgi Al
+                                    <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -587,4 +664,61 @@
     </section>
 
 
+@endsection
+@section('customJS')
+    <script>
+        var	tpj = jQuery;
+        if(window.RS_MODULES === undefined) window.RS_MODULES = {};
+        if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
+        RS_MODULES.modules["revslider31"] = {init:function() {
+                window.revapi3 = window.revapi3===undefined || window.revapi3===null || window.revapi3.length===0  ? document.getElementById("rev_slider_3_1") : window.revapi3;
+                if(window.revapi3 === null || window.revapi3 === undefined || window.revapi3.length==0) { window.revapi3initTry = window.revapi3initTry ===undefined ? 0 : window.revapi3initTry+1; if (window.revapi3initTry<20) requestAnimationFrame(function() {RS_MODULES.modules["revslider31"].init()}); return;}
+                window.revapi3 = jQuery(window.revapi3);
+                if(window.revapi3.revolution==undefined){ revslider_showDoubleJqueryError("rev_slider_3_1"); return;}
+                revapi3.revolutionInit({
+                    revapi:"revapi3",
+                    sliderLayout:"fullwidth",
+                    visibilityLevels:"1240,1024,778,480",
+                    gridwidth:"1230,1024,778,480",
+                    gridheight:"600,600,600,540",
+                    spinner:"spinner0",
+                    perspective:600,
+                    perspectiveType:"global",
+                    keepBPHeight:true,
+                    editorheight:"600,600,600,540",
+                    responsiveLevels:"1240,1024,778,480",
+                    progressBar:{disableProgressBar:true},
+                    navigation: {
+                        onHoverStop:false,
+                        arrows: {
+                            enable:true,
+                            style:"custom",
+                            hide_onleave:true,
+                            left: {
+                                h_offset:30
+                            },
+                            right: {
+                                h_offset:30
+                            }
+                        }
+                    },
+                    parallax: {
+                        levels:[5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,30],
+                        type:"scroll",
+                        origo:"slidercenter",
+                        speed:0
+                    },
+                    viewPort: {
+                        global:false,
+                        globalDist:"-200px",
+                        enable:false
+                    },
+                    fallbacks: {
+                        allowHTML5AutoPlayOnAndroid:true
+                    },
+                });
+
+            }}
+        if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
+    </script>
 @endsection
