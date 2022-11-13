@@ -27,7 +27,7 @@
                                 <ul>
                                     @foreach($item->getService as $row)
                                         <li>
-                                            <a href="{{ route(service($item->id), $row->slug) }}" title="{{ $row->title }}">
+                                            <a href="{{ route(service($item->id), $row->slug) }}" title="{{ $row->title }}" class="{{ ($row->slug == $Detay->slug) ? 'active' : null}}">
                                                 {{ $row->title }}
                                             </a>
                                         </li>

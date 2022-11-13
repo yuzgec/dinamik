@@ -20,6 +20,15 @@ class HomeController extends Controller
 
     }
 
+    public function bankinfo (){
+        SEOMeta::setTitle('Banka Hesap Numaralarımız | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setCanonical(url()->full());
+
+        return view('frontend.corporate.bankinfo');
+
+    }
+
     public function contactus(){
 
         SEOMeta::setTitle('İletişim | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
@@ -35,7 +44,7 @@ class HomeController extends Controller
         SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setCanonical(url()->full());
 
-        return view('frontend.corporate.contactus');
+        return view('frontend.corporate.price');
     }
 
     public function support(){

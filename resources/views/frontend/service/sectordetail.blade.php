@@ -19,7 +19,7 @@
                     <div class="sr-sidebar">
 
                         @foreach($ServiceCategory as $item)
-                            <div class="sidebar-widget sr-list-widget">
+                            <div class="sidebar-widget sr-list-widget" style="border:1px solid #0c52c2;padding: 10px;border-radius: 5px">
                                 <div class="widget-title">
                                     <h5>{{ $item->title }}</h5>
                                 </div>
@@ -27,7 +27,7 @@
                                     <ul>
                                         @foreach($item->getService as $row)
                                             <li>
-                                                <a href="{{ route(service($item->id), $row->slug) }}" title="{{ $row->title }}">
+                                                <a href="{{ route(service($item->id), $row->slug) }}" title="{{ $row->title }}" class="{{ ($row->slug == $Detay->slug) ? 'active' : null}}">
                                                     {{ $row->title }}
                                                 </a>
                                             </li>
@@ -45,6 +45,7 @@
                                 <a href="#" class="btn-2">Company Brochure<span><i class="far fa-file-pdf"></i> </span></a>
                             </div>
                         </div>
+
 
                         <div class="sidebar-widget sr-list-widget">
                             <div class="widget-title">
