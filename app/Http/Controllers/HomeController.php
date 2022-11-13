@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\Page;
 use App\Models\Service;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -14,8 +15,8 @@ class HomeController extends Controller
         SEOMeta::setTitle('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setCanonical(url()->full());
-
-        return view('frontend.index');
+        $Faq =  Faq::all();
+        return view('frontend.index' ,compact('Faq'));
 
     }
 

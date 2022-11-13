@@ -259,7 +259,7 @@
                 </div>
             </div>
             <div class="row">
-                @foreach($Service as $item)
+                @foreach($Service->where('category', 1) as $item)
                 <div class="col-lg-4 col-sm-6">
                     <div class="srv2-item">
 
@@ -372,25 +372,27 @@
                 <div class="pmv-nav">
                     <ul class="nav" >
                         @foreach($Service->where('category', 3) as $item)
-                        <li><a href="#{{ $item->slug }}" data-bs-toggle="tab" class="@if ($loop->first) active @endif">{{ $item->title }}</a></li>
+                        <li><a href="#{{ str_replace('0850-','',$item->slug)}}" data-bs-toggle="tab" class="@if ($loop->first) active @endif">{{ $item->title }}</a></li>
                         @endforeach
                     </ul>
                 </div>
 
                 <div class="tab-content">
                     @foreach($Service->where('category', 3) as $item)
-                    <div class="tab-pane fade  @if ($loop->first) active show @endif" id="{{ $item->slug }}">
+                    <div class="tab-pane fade  @if ($loop->first) active show @endif" id="{{ str_replace('0850-','',$item->slug)}}">
                         <div class="row align-items-center">
                             <div class="col-lg-6 order-2 order-lg-1">
                                 <div class="pmv-content">
                                     <h4>{{ $item->title }}</h4>
-                                    <p>We know that if you love our service you’re going to recommend us to your family and friends, so your satisfaction is our number one priority. If you’re unhappy with our service in any way.</p>
-                                    <a href="#" class="bixol-primary-btn">View terms of services</a>
+                                    {{ $item->short }}
+                                </div>
+                                <div class="pmv-content">
+                                <a href="{{ route(service($item->id), $item->slug) }}" class="bixol-primary-btn">Detaylı Bilgi İçin</a>
                                 </div>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2">
                                 <div class="img-wrapper">
-                                    <img src="/frontend/images/home2/tab-1.jpg" alt="">
+                                    <img src="/frontend/images/sms.svg" alt="" class="img-fluid" width="250px">
                                 </div>
                             </div>
                         </div>
@@ -414,93 +416,30 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-8">
                     <div class="faq-content">
                         <div class="faq-wrapper">
                             <div class="accordion" id="faq-accordion">
+                                @foreach($Faq as $item)
                                 <div class="accordion-item">
                                     <div class="accordion-header">
-                                        <a href="#collapseOne" data-bs-toggle="collapse">En iyi Toplu SMS firması nasıl belirlenir?</a>
+                                        <a href="#d-{{ $item->id }}" data-bs-toggle="collapse">{{ $item->title }}</a>
                                     </div>
-                                    <div id="collapseOne" class="collapse show" data-bs-parent="#faq-accordion">
+                                    <div id="d-{{ $item->id }}" class="collapse @if  ($loop->first) show @endif" data-bs-parent="#faq-accordion">
                                         <div class="accordion-body">
-                                            <p>Toplu SMS firması belirlerken gönderim hızına, rapor kalitesine, API desteğine, problem anında çağrı merkezi destek kalitesi ve sürekli ulaşabilme durumuna dikkat etmeniz gerekmektedir.</p>
+                                            {!! $item->desc !!}
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <div class="accordion-header">
-                                        <a href="#collapseTwo" data-bs-toggle="collapse">Toplu SMS paketleri nedir nasıl kullanılır?</a>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" data-bs-parent="#faq-accordion">
-                                        <div class="accordion-body">
-                                            <p>Toplu SMS gönderimini isterseniz size özel tarife üzerinden isterseniz de seçeceğiniz paket üzerinden gönderebilirsiniz. Her 1 boy SMS için paketinizden 1 adet düşer. Paketlerin kullanım süreleri aksi belirtilmediği sürece 1 yıldır.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <div class="accordion-header">
-                                        <a href="#collapseThree" data-bs-toggle="collapse">Toplu SMS gönderme programı var mıdır?</a>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" data-bs-parent="#faq-accordion">
-                                        <div class="accordion-body">
-                                            <p>Mobil uygulama, masaüstü uygulaması, excel eklentisi ve webportal üzerinden SMS gönderimi yapabilirsiniz.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <div class="accordion-header">
-                                        <a href="#collapsefour" data-bs-toggle="collapse">Yurt dışına Toplu SMS gönderilebilir mi?</a>
-                                    </div>
-                                    <div id="collapsefour" class="collapse" data-bs-parent="#faq-accordion">
-                                        <div class="accordion-body">
-                                            <p>Yurt dışına gönderim bulunmaktadır. Tüm ülkelere gönderim yapabilirsiniz.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="faq-content">
-                        <div class="faq-wrapper">
-                            <div class="accordion" id="faq-accordion">
-                                <div class="accordion-item">
-                                    <div class="accordion-header">
-                                        <a href="#collapse1" data-bs-toggle="collapse">Toplu SMS içerisinde link kullanılabilir mi?</a>
-                                    </div>
-                                    <div id="collapse1" class="collapse show" data-bs-parent="#faq-accordion1">
-                                        <div class="accordion-body">
-                                            <p>Kendinize ait link'i metin içerisinde kullanabilirsiniz.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <div class="accordion-header">
-                                        <a href="#collapse2" data-bs-toggle="collapse">Ret imkanı var mı?</a>
-                                    </div>
-                                    <div id="collapse2" class="collapse" data-bs-parent="#faq-accordion1">
-                                        <div class="accordion-body">
-                                            <p>İYS (İleti Yönetim Sistemi) ile tam entegredir. Size İYS'ye yükleyebileceğiniz bir arayüz sunmaktayız.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <div class="accordion-header">
-                                        <a href="#collapse3" data-bs-toggle="collapse">OTP SMS hizmeti var mıdır?</a>
-                                    </div>
-                                    <div id="collapse3" class="collapse" data-bs-parent="#faq-accordion1">
-                                        <div class="accordion-body">
-                                            <p>Evet. Tek kullanımlık şifre vb. bir defaya mahsus olarak gönderilmesi gereken bilgilerin doğrudan,hızlı ve güvenilir bir şekilde OTP SMS hizmeti ile gerçekleştirebilirsiniz.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-md-4 mt-5">
+                    <img src="/frontend/images/services/srd-img.png">
+                </div>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
