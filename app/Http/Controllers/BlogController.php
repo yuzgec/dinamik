@@ -28,7 +28,6 @@ class BlogController extends Controller
     {
         $New = new Blog;
         $New->title = $request->title;
-        $New->slug = seo($request->title);
         $New->category = $request->category;
         $New->short = $request->short;
         $New->desc = $request->desc;
@@ -68,7 +67,6 @@ class BlogController extends Controller
         $Update = Blog::findOrFail($id);
 
         $Update->title = $request->title;
-        $Update->slug = seo($request->title);
         $Update->category = $request->category;
         $Update->short = $request->short;
         $Update->desc = $request->desc;

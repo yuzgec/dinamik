@@ -6347,9 +6347,8 @@ i {
     top: 0;
     width: 100%;
     height: 6px;
-    background-color: #0c52c2; }
-  .service-details .sr-sidebar .sr-list-widget .widget-title {
-    padding: 30px 0; }
+     }
+
   .service-details .sr-sidebar .sr-list-widget .list-nav ul li + li a {
     border-top: 1px solid #eaeaea;
     margin-top: 1px; }

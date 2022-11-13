@@ -29,7 +29,7 @@
                         data-frame_0="rX:-70deg;oZ:-50;"
                         data-frame_1="oZ:-50;e:power4.inOut;st:800;sp:1750;sR:1000;"
                         data-frame_999="o:0;st:w;sR:6250;"
-                        style="z-index:10;font-family:'Poppins';text-shadow: 2px 2px 2px #0c52c2;"
+                        style="z-index:10;font-family:'Poppins';text-shadow: 2px 2px 2px #0c52c2;color:#0c52c2 !important;"
                     >Dinamik SMS'ile<br />Hızlı ve Ekonomik<br /> SMS hizmeti
                     </rs-layer>
 
@@ -51,7 +51,7 @@
                     <a
                         id="slider-3-slide-7-layer-5"
                         class="rs-layer"
-                        href="services.html" target="_self" rel="nofollow"
+                        href="#" target="_self" rel="nofollow"
                         data-type="text"
                         data-xy="y:b;"
                         data-text="w:normal;s:20,20,16,16;l:25,25,26,26;"
@@ -61,7 +61,7 @@
                         data-frame_1="st:1950;sp:1000;sR:1950;"
                         data-frame_999="o:0;st:w;sR:6050;"
                         style="z-index:12;font-family:'Roboto';"
-                    ><span class="btn btn-primary">Teklif İste<i class="fac fac-angle-double-right space-left"></i></span>
+                    ><span class="btn btn-primary">Ücretsiz Üye Ol<i class="fac fac-angle-double-right space-left"></i></span>
                     </a>
                 </rs-group>
 

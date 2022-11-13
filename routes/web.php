@@ -37,6 +37,8 @@ Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function(
     Route::auto('/video-categories', VideoCategoryController::class);
     Route::auto('/settings', SettingController::class);
     Route::auto('/contact', ContactController::class);
+    Route::auto('/features', FeaturesController::class);
+    Route::auto('/reference', ReferenceController::class);
 });
 
 require __DIR__.'/auth.php';

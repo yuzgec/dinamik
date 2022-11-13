@@ -5,6 +5,5 @@
         <link rel="stylesheet" href="/frontend/css/flaticon.css">
         <link rel="stylesheet" href="/frontend/css/slick.css">
         <link rel="stylesheet" href="/frontend/css/magnific-popup.css">
-        <link rel="stylesheet" href="/frontend/css/odometer-theme-car.css">
         <link rel="stylesheet" href="/frontend/css/rs6.css">
         <link rel="stylesheet" href="/frontend/css/style.css">

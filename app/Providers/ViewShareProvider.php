@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Features;
 use App\Models\Page;
 use App\Models\Service;
 use App\Models\ServiceCategory;
@@ -19,6 +20,10 @@ class ViewShareProvider extends ServiceProvider
             return Page::with('getCategory')->get();
         });
 
+        $Features = Cache::remember('features',now()->addYear(1), function () {
+            return Features::all();
+        });
+
         $ServiceCategory = Cache::remember('service_categories',now()->addYear(1), function () {
             return ServiceCategory::select('id', 'title', 'slug', 'status')->with('getService')->where('status', '=', 1)->get();
         });
@@ -26,6 +31,7 @@ class ViewShareProvider extends ServiceProvider
         View::share([
             'Pages' => $Pages,
             'ServiceCategory' => $ServiceCategory,
+            'Features' => $Features,
         ]);
     }
 }
