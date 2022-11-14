@@ -29,9 +29,8 @@
                                         </div>
                                         <div class="column-content">
                                             <h5>Telefon Numaralaramız</h5>
-                                            <p>Ofis : 0216 465 45 70 </p>
-                                            <p>Satış : 0216 465 45 70 </p>
-                                            <p>Destek :  465 45 70 </p>
+                                            <p>0216 822 01 11 </p>
+                                            <p>0850 678 01 11 </p>
                                         </div>
                                     </div>
                                 </div>
@@ -92,6 +91,7 @@
                         </form>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

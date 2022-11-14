@@ -1178,7 +1178,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  padding: 50px 0 0px 0; }
+  padding: 0px 0 0px 0; }
   .bixol-footer .bixol-footer-logo {
     position: absolute;
     width: 130px;
@@ -10778,8 +10778,7 @@ i {
       width: auto; } }
 
 /************ Get In Touch **************/
-.get-in-touch {
-  padding: 40px 0; }
+
   .get-in-touch .git-content {
     padding: 20px 25px;
     background-size: cover;

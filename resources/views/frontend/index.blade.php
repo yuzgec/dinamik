@@ -2,7 +2,7 @@
 @section('content')
     @include('frontend.layout.slider')
 
-    <div class="get-in-touch">
+    <div class="get-in-touch mt-30 mb-30">
         <div class="container">
             <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(/frontend/images/home6/git-bg.jpg;);">
                 <div class="row align-items-center">
@@ -232,7 +232,7 @@
         </div>
     </section>
 
-    <div class="get-in-touch">
+    <div class="get-in-touch mb-30 mt-30">
         <div class="container">
             <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(&quot;/frontend/images/home6/git-bg.jpg&quot;);">
                 <div class="row align-items-center">

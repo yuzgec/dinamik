@@ -1,5 +1,20 @@
-     <!-- Footer -->
+<div class="get-in-touch">
+
+    <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(&quot;/frontend/images/home6/git-bg.jpg&quot;);">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div class="git-left">
+                    <p class="text-white text-center">www.dinamiksms.com TC. Bilgi Teknolojileri ve İletişim Kurumu (BTK) dan işletmeci yetkilendirmesine
+                        sahip <br>DİNAMİK TELEKOMÜNİKASYON BİLİŞİM SİSTEMLERİ SANAYİ VE TİCARET LTD.ŞTİ ad ve hesabına sunulmaktadır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
      <footer class="bixol-footer" >
+
         <!--    <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6">

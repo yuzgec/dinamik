@@ -4,7 +4,7 @@
                     <div class="row">
                         <div class="col-lg-9">
                             <div class="info-left">
-                                <span><i class="flaticon-telephone"></i><strong>Telefon:</strong> 0216 465 45 70</span>
+                                <span><i class="flaticon-telephone"></i><strong>Telefon:</strong> 0216 822 01 11</span>
                                 <span><i class="fas fa-envelope-open"></i><strong>Mail:</strong> info@dinamiksms.com</span>
                                 <span><i class="fas fa-calendar"></i><strong>7/24</strong> Kesintisiz Hizmet</span>
                             </div>
