@@ -18,7 +18,15 @@
                 <div class="col-lg-3">
                     <div class="sr-sidebar">
 
-                        @foreach($ServiceCategory as $item)
+                    <div class="sidebar-widget sr-btn-widget" data-background="/frontend/images/services/sr-widget-bg.jpg">
+                        <span class="subtitle text-white" >Dinamik SMS</span>
+                        <h5>SMS Başvuru Formu</h5>
+                        <div class="download-btns">
+                            <a href="#" class="btn-1">Abonelik Sözleşmesi<span><i class="far fa-file-pdf"></i> </span></a>
+                        </div>
+                    </div>
+
+                    @foreach($ServiceCategory as $item)
                             <div class="sidebar-widget sr-list-widget" style="border:1px solid #0c52c2;padding: 10px;border-radius: 5px">
                                 <div class="widget-title">
                                     <h5>{{ $item->title }}</h5>
@@ -37,14 +45,6 @@
                             </div>
                         @endforeach
 
-                        <div class="sidebar-widget sr-btn-widget" data-background="/frontend/images/services/sr-widget-bg.jpg">
-                            <span class="subtitle text-white" >Dinamik SMS</span>
-                            <h5>SMS Başvuru Formu</h5>
-                            <div class="download-btns">
-                                <a href="#" class="btn-1">Abonelik Sözleşmesi<span><i class="far fa-file-pdf"></i> </span></a>
-                                <a href="#" class="btn-2">Company Brochure<span><i class="far fa-file-pdf"></i> </span></a>
-                            </div>
-                        </div>
 
 
                         <div class="sidebar-widget sr-list-widget">
