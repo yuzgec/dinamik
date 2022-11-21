@@ -290,7 +290,7 @@
                                 <span><i class="flaticon flaticon-return"></i></span>
                             </div>
                             <div class="bixol-service-content">
-                                <a href=""><h5>HEMEN İADE</h5></a>
+                                <a href=""><h6>HEMEN İADE</h6></a>
                                 <p>Gönderilmeyen SMS'lerin kredi iadesi hemen yapılsın istiyorsanız,</p>
                             </div>
                         </div>
@@ -299,7 +299,7 @@
                                 <span><i class="flaticon flaticon-return"></i></span>
                             </div>
                             <div class="bixol-service-content">
-                                <a href="#"><h5>LİSANSLI FİRMA</h5></a>
+                                <a href="#"><h6>LİSANSLI FİRMA</h6></a>
                                 <p>B.T.K Lisanslı YASAL bir hizmet istiyorsanız.</p>
                             </div>
                         </div>
@@ -308,7 +308,7 @@
                                 <span><i class="flaticon flaticon-return"></i></span>
                             </div>
                             <div class="bixol-service-content">
-                                <a href="#"><h5>GERÇEK ZAMANLI RAPOR</h5></a>
+                                <a href="#"><h6>GERÇEK ZAMANLI RAPOR</h6></a>
                                 <p>SMS gönderimlerinizi gerçek zamanlı raporlayın. </p>
                             </div>
                         </div>
@@ -317,7 +317,7 @@
                 <div class="col-lg-4">
                     <div class="bixol-service-middle">
                         <div class="img-wrapper">
-                            <img src="/frontend/images/home1/sr-middle.png" alt="">
+                            <img src="/dinamiklogo.png" alt="">
                             <div class="banner-content">
                                 <span class="banner-svg-1"></span>
                                 <span class="banner-svg-2"></span>
@@ -334,7 +334,7 @@
                                 <span><i class="flaticon flaticon-return"></i></span>
                             </div>
                             <div class="bixol-service-content">
-                                <a href="#"><h5>İLETİ YÖNETİM SİSTEMİ</h5></a>
+                                <a href="#"><h6>İLETİ YÖNETİM SİSTEMİ</h6></a>
                                 <p>6563-Elektronik ticaretin düzenlenmesine tam entegre şeklinde yasal gönderim.</p>
                             </div>
                         </div>
@@ -343,7 +343,7 @@
                                 <span><i class="flaticon flaticon-return"></i></span>
                             </div>
                             <div class="bixol-service-content">
-                                <a href="#"><h5>TEK FİYAT</h5></a>
+                                <a href="#"><h6>TEK FİYAT</h6></a>
                                 <p>Tüm GSM operatörlere gönderilir ve fiyatlar aynıdır.</p>
                             </div>
                         </div>
@@ -352,7 +352,7 @@
                                 <span><i class="flaticon flaticon-return"></i></span>
                             </div>
                             <div class="bixol-service-content">
-                                <a href="#"><h5>2 YIL GEÇERLİ</h5></a>
+                                <a href="#"><h6>2 YIL GEÇERLİ</h6></a>
                                 <p>Satın alınan kontörlerin kullanım süresi 2 yıldır.</p>
                             </div>
                         </div>

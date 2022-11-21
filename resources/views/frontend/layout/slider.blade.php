@@ -1,4 +1,3 @@
-
 <p class="rs-p-wp-fix"></p>
 <rs-module-wrap id="rev_slider_3_1_wrapper" data-alias="home-3" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
     <rs-module id="rev_slider_3_1" data-version="6.5.7">
@@ -18,7 +17,6 @@
                     style="z-index:13;"
                 >
 
-
                     <rs-layer
                         id="slider-3-slide-7-layer-2"
                         data-type="text"
@@ -29,7 +27,8 @@
                         data-frame_0="rX:-70deg;oZ:-50;"
                         data-frame_1="oZ:-50;e:power4.inOut;st:800;sp:1750;sR:1000;"
                         data-frame_999="o:0;st:w;sR:6250;"
-                        style="z-index:10;font-family:'Poppins';text-shadow: 2px 2px 2px #0c52c2;color:#0c52c2 !important;"
+                        data-color="#0c52c2"
+                        style="z-index:10;font-family:'Poppins';text-shadow: 2px 2px 2px #fff;"
                     >Dinamik SMS'ile<br />Hızlı ve Ekonomik<br /> SMS hizmeti
                     </rs-layer>
 
