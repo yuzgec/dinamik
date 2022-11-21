@@ -11,12 +11,12 @@
     .bixol-navigation .desktop-menu ul li {
       display: inline-block;
       position: relative; }
-      .bixol-navigation .desktop-menu ul li:nth-child(1), .bixol-navigation .desktop-menu ul li:nth-child(2), .bixol-navigation .desktop-menu ul li:nth-child(3) {
+      .bixol-navigation .desktop-menu ul li:nth-child(1), .bixol-navigation .desktop-menu ul li:nth-child(2), .bixol-navigation .desktop-menu ul li:nth-child(3), .bixol-navigation .desktop-menu ul li:nth-child(4) {
         float: left; }
       .bixol-navigation .desktop-menu ul li + li {
         margin-left: 25px; }
       .bixol-navigation .desktop-menu ul li a {
-        padding: 18px 25px;
+        padding: 15px 10px;
         display: inline-block;
         color: #ffffff;
         text-decoration: none;
@@ -24,21 +24,7 @@
         font-weight: 600;
         text-transform: capitalize;
         position: relative; }
-        .bixol-navigation .desktop-menu ul li a::before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 0px;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          width: 25px;
-          height: 3px;
-          background-color: #0c52c2;
-          opacity: 0;
-          -webkit-transition: all 0.3s ease-in;
-          -o-transition: all 0.3s ease-in;
-          transition: all 0.3s ease-in; }
+
         .bixol-navigation .desktop-menu ul li a:hover::before {
           opacity: 1;
           left: -10px; }
@@ -46,7 +32,7 @@
         content: '+';
         position: absolute;
         top: 50%;
-        right: 13px;
+        right: 0px;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -175,22 +161,7 @@
       -webkit-transition: all 0.3s ease-in;
       -o-transition: all 0.3s ease-in;
       transition: all 0.3s ease-in; }
-      .header-style-2 .desktop-menu ul li a::before {
-        content: '';
-        position: absolute;
-        bottom: -6px;
-        left: 50%;
-        -webkit-transform: translateX(-50%) scale(0);
-        -ms-transform: translateX(-50%) scale(0);
-        transform: translateX(-50%) scale(0);
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: #0c52c2;
-        border: 3px solid #0431b8;
-        -webkit-transition: all 0.3s ease-in;
-        -o-transition: all 0.3s ease-in;
-        transition: all 0.3s ease-in; }
+
       .header-style-2 .desktop-menu ul li a:hover::before {
         -webkit-transform: translateX(-50%) scale(1);
         -ms-transform: translateX(-50%) scale(1);
@@ -246,26 +217,14 @@
       opacity: 1;
       visibility: visible; }
     .header-style-2 .desktop-menu ul li:hover a {
-      color: #082680; }
+      color: #f4f4f4; }
   @media (max-width: 1199.98px) {
     .header-style-2 .desktop-menu {
       display: none; } }
 
 /**************** Header 3 Menu ******************/
 .header-style-3 .desktop-menu ul li a {
-  color: #000e39; }
-  .header-style-3 .desktop-menu ul li a::before {
-    bottom: 0;
-    left: 50%;
-    border: 0;
-    width: 0;
-    height: 3px;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    border-radius: 0;
-    background-color: #000e39; }
-
+  color: #fff; }
 .header-style-3 .desktop-menu ul li ul li a::before {
   width: 0px;
   top: 20px !important; }
