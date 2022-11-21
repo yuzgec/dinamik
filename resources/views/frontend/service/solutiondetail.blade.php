@@ -26,7 +26,7 @@
                         </div>
                     </div>
 
-                    @foreach($ServiceCategory as $item)
+                    @foreach($ServiceCategory->whereIn('id',[1,$Detay->id]) as $item)
                         <div class="sidebar-widget sr-list-widget">
                             <div class="widget-title">
                                 <h5>{{ $item->title }}</h5>
@@ -44,22 +44,7 @@
                             </div>
                         </div>
                         @endforeach
-                        <div class="sidebar-widget sr-list-widget">
-                            <div class="widget-title">
-                                <h5>Kurumsal</h5>
-                            </div>
-                            <div class="list-nav">
-                                <ul>
-                                    @foreach($Pages as $item)
-                                        <li>
-                                            <a href="{{ route('corporatedetail',$item->slug) }}">
-                                                {{ $item->title }}
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
+
 
                     </div>
                 </div>

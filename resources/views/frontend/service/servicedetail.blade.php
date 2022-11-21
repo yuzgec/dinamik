@@ -26,7 +26,7 @@
                         </div>
                     </div>
 
-                    @foreach($ServiceCategory as $item)
+                        @foreach($ServiceCategory->whereIn('id',[1,$Detay->id]) as $item)
                         <div class="sidebar-widget sr-list-widget">
                             <div class="widget-title">
                                 <h5>{{ $item->title }}</h5>
@@ -95,22 +95,22 @@
                     <div class="srv2-service-section row  pb-30">
                         @foreach($Features as $item)
                         <div class="col-lg-4 col-sm-6">
-                                    <div class="srv2-item">
+                                <div class="srv2-item">
+
+                                    <div class="srv2-service-content">
+                                        <h5>{{ $item->title }}</h5>
+                                        {!! $item->desc !!}
+                                    </div>
+                                    <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
 
                                         <div class="srv2-service-content">
                                             <h5>{{ $item->title }}</h5>
                                             {!! $item->desc !!}
-                                        </div>
-                                        <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
-
-                                            <div class="srv2-service-content">
-                                                <h5>{{ $item->title }}</h5>
-                                                {!! $item->desc !!}
-                                                <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
-                                            </div>
+                                            <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         @endforeach
                     </div>
 
