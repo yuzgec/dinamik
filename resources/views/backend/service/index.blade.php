@@ -46,7 +46,7 @@
                         </td>
                         <td>
                             <div class="font-weight-medium">
-                                <a href="{{ route('service', $item->id) }}" title="{{ $item->title }} - Düzenle">
+                                <a href="{{ route('service.edit', $item->id) }}" title="{{ $item->title }} - Düzenle">
                                     {{ $item->title }}
                                 </a>
                             </div>
