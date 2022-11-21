@@ -86,7 +86,7 @@
                                 </div>
                             </div>
                             <div class="submit-btn">
-                                <button type="submit"><i class="fas fa-check-circle"></i>Send message</button>
+                                <button type="submit"><i class="fas fa-check-circle"></i>MESAJI GÖNDER</button>
                             </div>
                         </form>
                     </div>

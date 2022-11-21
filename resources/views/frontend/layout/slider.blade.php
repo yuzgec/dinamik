@@ -48,21 +48,7 @@
                                 >Bixol is professionalism in the cleaning industry by providing top-quality cleaning and related services
                                 </rs-layer>-->
 
-                    <a
-                        id="slider-3-slide-7-layer-5"
-                        class="rs-layer"
-                        href="#" target="_self" rel="nofollow"
-                        data-type="text"
-                        data-xy="y:b;"
-                        data-text="w:normal;s:20,20,16,16;l:25,25,26,26;"
-                        data-rsp_o="off"
-                        data-rsp_bd="off"
-                        data-frame_0="y:50;"
-                        data-frame_1="st:1950;sp:1000;sR:1950;"
-                        data-frame_999="o:0;st:w;sR:6050;"
-                        style="z-index:12;font-family:'Roboto';"
-                    ><span class="btn btn-primary">Ücretsiz Üye Ol<i class="fac fac-angle-double-right space-left"></i></span>
-                    </a>
+
                 </rs-group>
 
                 <rs-layer

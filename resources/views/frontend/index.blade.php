@@ -61,7 +61,7 @@
                                     <li>Başlıklı Sms Gönderimi</li>
                                     <li>Anlık Detaylı Raporlama</li>
                                     <li>İletilmeyen İadesi</li>
-                                    <li>Heryöne Gönderim</li>
+                                    <li>Her yöne Gönderim</li>
                                     <li>Kolay Excel Aktarım</li>
                                     <li>KDV Dahil</li>
                                 </ul>
@@ -90,7 +90,7 @@
                                     <li>Başlıklı Sms Gönderimi</li>
                                     <li>Anlık Detaylı Raporlama</li>
                                     <li>İletilmeyen İadesi</li>
-                                    <li>Heryöne Gönderim</li>
+                                    <li>Her yöne Gönderim</li>
                                     <li>Kolay Excel Aktarım</li>
                                     <li>KDV Dahil</li>
                                 </ul>
@@ -119,7 +119,7 @@
                                     <li>Başlıklı Sms Gönderimi</li>
                                     <li>Anlık Detaylı Raporlama</li>
                                     <li>İletilmeyen İadesi</li>
-                                    <li>Heryöne Gönderim</li>
+                                    <li>Her yöne Gönderim</li>
                                     <li>Kolay Excel Aktarım</li>
                                     <li>KDV Dahil</li>
                                 </ul>
@@ -148,7 +148,7 @@
                                     <li>Başlıklı Sms Gönderimi</li>
                                     <li>Anlık Detaylı Raporlama</li>
                                     <li>İletilmeyen İadesi</li>
-                                    <li>Heryöne Gönderim</li>
+                                    <li>Her yöne Gönderim</li>
                                     <li>Kolay Excel Aktarım</li>
                                     <li>KDV Dahil</li>
                                 </ul>
@@ -214,10 +214,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-5">
-                            <a href="{{ route('service') }}" class="btn btn-primary">Hizmetlerimiz</a>
-                            <a href="{{ route('contactus') }}" class="btn btn-primary">İletişim</a>
-                        </div>
+
                     </div>
 
                 </div>
@@ -238,7 +235,7 @@
                 <div class="row align-items-center">
                     <div class="col-12">
                         <div class="git-left">
-                            <p class="text-white text-center">www.dinamiksms.com TC. Bilgi Teknolojileri ve İletişim Kurumu (BTK) dan işletmeci yetkilendirmesine
+                            <p class="text-white text-center">TC. Bilgi Teknolojileri ve İletişim Kurumu (BTK) dan işletmeci yetkilendirmesine
                                 sahip <br>DİNAMİK TELEKOMÜNİKASYON BİLİŞİM SİSTEMLERİ SANAYİ VE TİCARET LTD.ŞTİ ad ve hesabına sunulmaktadır.
                             </p>
                         </div>
@@ -303,7 +300,7 @@
                             </div>
                             <div class="bixol-service-content">
                                 <a href="#"><h5>LİSANSLI FİRMA</h5></a>
-                                <p>BTK lisanslı Yasal bir sistem istiyorsanız</p>
+                                <p>B.T.K Lisanslı YASAL bir hizmet istiyorsanız.</p>
                             </div>
                         </div>
                         <div class="bixol-service-item">
@@ -312,7 +309,7 @@
                             </div>
                             <div class="bixol-service-content">
                                 <a href="#"><h5>GERÇEK ZAMANLI RAPOR</h5></a>
-                                <p>SMSgönderimlerinizi gerçek zamanlı raporlayın. </p>
+                                <p>SMS gönderimlerinizi gerçek zamanlı raporlayın. </p>
                             </div>
                         </div>
                     </div>
@@ -337,7 +334,7 @@
                                 <span><i class="flaticon flaticon-return"></i></span>
                             </div>
                             <div class="bixol-service-content">
-                                <a href="#"><h5>İleti Yönetim Sistemi</h5></a>
+                                <a href="#"><h5>İLETİ YÖNETİM SİSTEMİ</h5></a>
                                 <p>6563-Elektronik ticaretin düzenlenmesine tam entegre şeklinde yasal gönderim.</p>
                             </div>
                         </div>
@@ -347,7 +344,7 @@
                             </div>
                             <div class="bixol-service-content">
                                 <a href="#"><h5>TEK FİYAT</h5></a>
-                                <p>Tüm operatörlere gönderilir ve fiyatlar değişmez</p>
+                                <p>Tüm GSM operatörlere gönderilir ve fiyatlar aynıdır.</p>
                             </div>
                         </div>
                         <div class="bixol-service-item">
@@ -356,7 +353,7 @@
                             </div>
                             <div class="bixol-service-content">
                                 <a href="#"><h5>2 YIL GEÇERLİ</h5></a>
-                                <p>Alınan kontörlerin geçerliliği 2 YIL dır.</p>
+                                <p>Satın alınan kontörlerin kullanım süresi 2 yıldır.</p>
                             </div>
                         </div>
                     </div>
