@@ -118,6 +118,7 @@
                         <li><a href="{{ route('price') }}">APİ</a></li>
                         <li><a href="{{ route('price') }}">Fiyatlar</a></li>
                         <li><a href="{{ route('contactus') }}">İletişim</a></li>
+                        <li><a href="{{ route('contactus') }}">Giriş Yap</a></li>
                     </ul>
                 </nav>
             </div>
