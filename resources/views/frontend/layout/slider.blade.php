@@ -27,7 +27,7 @@
                         data-frame_0="rX:-70deg;oZ:-50;"
                         data-frame_1="oZ:-50;e:power4.inOut;st:800;sp:1750;sR:1000;"
                         data-frame_999="o:0;st:w;sR:6250;"
-                        data-color="#0c52c2"
+                        data-color="#082680"
                         style="z-index:10;font-family:'Poppins';text-shadow: 2px 2px 2px #fff;"
                     >Dinamik SMS'ile<br />Hızlı ve Ekonomik<br /> SMS hizmeti
                     </rs-layer>

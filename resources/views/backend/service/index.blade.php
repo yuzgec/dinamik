@@ -45,9 +45,13 @@
                             <span class="avatar me-2" style="background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page')}})"></span>
                         </td>
                         <td>
-                            <div class="font-weight-medium">{{ $item->title }}</div>
+                            <div class="font-weight-medium">
+                                <a href="{{ route('service', $item->id) }}" title="{{ $item->title }} - Düzenle">
+                                    {{ $item->title }}
+                                </a>
+                            </div>
                         </td>
-                        <td class="text-center">
+                        <td>
                             <label class="form-check form-check-single form-switch">
                                 <input class="form-check-input switch" status-id="{{ $item->id }}"  type="checkbox" @if ($item->status == 1) checked @endif>
                             </label>

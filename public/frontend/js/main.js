@@ -574,7 +574,7 @@ Last change:    00/00/00
 						skillProgress.each(function(){
 
 							$(this).pieChart({
-								barColor: '#0431b8',
+								barColor: '#082680',
 								trackColor: '#cddae6',
 								lineWidth: 10,
 								size: 130,
