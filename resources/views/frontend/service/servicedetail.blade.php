@@ -70,7 +70,7 @@
                         <div class="title-txt">
                             <h3>{{ $Detay->title }}</h3>
                         </div>
-                        <div class="pera-text">
+                        <div class="pera-text mt-20">
                             {!! $Detay->desc !!}
                         </div>
 
