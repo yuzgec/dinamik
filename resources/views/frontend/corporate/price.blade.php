@@ -1,6 +1,6 @@
 @extends('frontend.layout.app')
 @section('content')
-    <div class="get-in-touch">
+{{--    <div class="get-in-touch mt-5">
         <div class="container">
             <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(&quot;/frontend/images/home6/git-bg.jpg&quot;);">
                 <div class="row align-items-center">
@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--}}
 
     <section class="home6-pricing-table pt-10 pb-10">
         <div class="container">
@@ -81,7 +81,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 p-0">
-                        <div class="home6-pricing-column selected">
+                        <div class="home6-pricing-column">
                             <div class="h6-headline">
                                 <h5>50.000 SMS</h5>
                             </div>
@@ -200,7 +200,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 p-0">
-                        <div class="home6-pricing-column selected">
+                        <div class="home6-pricing-column">
                             <div class="h6-headline">
                                 <h5>50.000 SMS</h5>
                             </div>
@@ -262,5 +262,4 @@
             </div>
         </div>
     </section>
-
 @endsection

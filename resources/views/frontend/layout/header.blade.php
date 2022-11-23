@@ -115,10 +115,10 @@
                             </ul>
                         </li>
                         @endforeach
-                        <li><a href="{{ route('price') }}">APİ</a></li>
+                        <li><a href="{{ route('api') }}">APİ</a></li>
                         <li><a href="{{ route('price') }}">Fiyatlar</a></li>
                         <li><a href="{{ route('contactus') }}">İletişim</a></li>
-                        <li><a href="{{ route('contactus') }}">Giriş Yap</a></li>
+                        <li><a href="{{ route('home') }}">Giriş Yap</a></li>
                     </ul>
                 </nav>
             </div>

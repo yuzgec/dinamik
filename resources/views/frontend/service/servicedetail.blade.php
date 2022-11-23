@@ -18,15 +18,10 @@
                 <div class="col-lg-3">
                     <div class="sr-sidebar">
 
-                    <div class="sidebar-widget sr-btn-widget" data-background="/frontend/images/services/sr-widget-bg.jpg">
-                        <span class="subtitle text-white" >Dinamik SMS</span>
-                        <h5>SMS Başvuru Formu</h5>
-                        <div class="download-btns">
-                            <a href="#" class="btn-1">Abonelik Sözleşmesi<span><i class="far fa-file-pdf"></i> </span></a>
-                        </div>
-                    </div>
+                        @include('frontend.layout.sozlesme')
 
-                        @foreach($ServiceCategory->whereIn('id',[1,$Detay->id]) as $item)
+
+                    @foreach($ServiceCategory->whereIn('id',[1,$Detay->id]) as $item)
                         <div class="sidebar-widget sr-list-widget">
                             <div class="widget-title">
                                 <h5>{{ $item->title }}</h5>
