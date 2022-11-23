@@ -1,6 +1,16 @@
 @extends('frontend.layout.app')
 
 @section('content')
+    <div class="bixol-breadcrumb" data-background="/frontend/images/banner.jpg">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <h1>Api Dökümantasyonu</h1>
+                <a href="{{ route('home') }}">Anasayfa <i class="fas fa-angle-double-right"></i></a>
+                <a href="#">Kurumsal <i class="fas fa-angle-double-right"></i></a>
+                <span>Api</span>
+            </div>
+        </div>
+    </div>
 
 
     <section class="service-details pt-50 pb-50">
@@ -9,27 +19,22 @@
                 <div class="col-lg-3">
                     <div class="sr-sidebar">
 
-
                         <div class="sidebar-widget sr-list-widget">
                             <div class="widget-title">
                                 <h5>Kullanım Örnekleri</h5>
                             </div>
                             <div class="list-nav">
                                 <ul>
-                                    @foreach($Pages as $item)
-                                        <li>
-                                            <a href="{{ route('corporatedetail',$item->slug) }}">
-                                                {{ $item->title }}
-                                            </a>
-                                        </li>
-                                    @endforeach
+                                    <li><a href="#">PHP Kullanım Örneği</a></li>
+                                    <li><a href="#">Java Kullanım Örneği</a></li>
+                                    <li><a href="#">C# Kullanım Örneği</a></li>
+                                    <li><a href="#">Pyhton Kullanım Örneği</a></li>
+                                    <li><a href="#">Javascript Kullanım Örneği</a></li>
                                 </ul>
                             </div>
                         </div>
 
-
-
-                     @include('frontend.layout.sozlesme')
+                        @include('frontend.layout.sozlesme')
 
                     </div>
                 </div>
@@ -118,7 +123,7 @@
                             <p><span style="font-size:12pt">&Ouml;rnek Kullanıcı Bilgileri Kontrol&uuml; i&ccedil;in hazırlanmış XML ifadesi</span></p>
 
                             <p>&nbsp;</p>
-
+                            <code>
                             <p><span style="font-size:12pt">&lt;UserControl&gt;</span></p>
 
                             <p><span style="font-size:12pt">&lt;UserName&gt;test-2222&lt;/UserName&gt;</span></p>
@@ -128,7 +133,7 @@
                             <p><span style="font-size:12pt">&lt;Action&gt;4&lt;/Action&gt;</span></p>
 
                             <p><span style="font-size:12pt">&lt;/UserControl&gt;</span></p>
-
+                            </code>
                             <p>&nbsp;</p>
 
                             <p><span style="font-size:12pt">Yukarıdaki XML ifadesinde:</span></p>
@@ -188,7 +193,7 @@
                             <p><span style="font-size:12pt">Aşağıdaki &ouml;rnekte SingleTextSMS XML ifadesi g&ouml;sterilmektedir.</span></p>
 
                             <p>&nbsp;</p>
-
+                            <code>
                             <p><span style="font-size:12pt">SingleTextSMS XML ifadesi &ouml;rneği :</span></p>
 
                             <p><span style="font-size:12pt">&lt;SingleTextSMS&gt;</span></p>
@@ -210,7 +215,7 @@
                             <p><span style="font-size:12pt">&lt;ExDate&gt;240320131030&lt;/ExDate&gt;</span></p>
 
                             <p><span style="font-size:12pt">&lt;/SingleTextSMS&gt;</span></p>
-
+                            </code>
                             <p>&nbsp;</p>
 
                             <p><span style="font-size:12pt">Yukarıdaki XML ifadesinde;</span></p>
@@ -260,7 +265,7 @@
                             <p>&nbsp;</p>
 
                             <p><span style="font-size:12pt">&Ouml;rnek 5.2.1 - MultiTextSMS XML ifadesi &ouml;rneği :</span></p>
-
+                            <code>
                             <p><span style="font-size:12pt">&lt;MultiTextSMS&gt;</span></p>
 
                             <p><span style="font-size:12pt">&lt;UserName&gt;test-2222&lt;/UserName&gt;</span></p>
@@ -296,7 +301,7 @@
                             <p><span style="font-size:12pt">&lt;ExDate&gt;240320111030&lt;/ExDate&gt;</span></p>
 
                             <p><span style="font-size:12pt">&lt;/MultiTextSMS&gt;</span></p>
-
+                            </code>
                             <p>&nbsp;</p>
 
                             <p><span style="font-size:12pt">Yukarıdaki XML ifadesinde;</span></p>
@@ -354,7 +359,7 @@
                             <p>&nbsp;</p>
 
                             <p><span style="font-size:12pt">&Ouml;rnek Tarih bazında rapor i&ccedil;in gerekli XML ifadesi :</span></p>
-
+                            <code>
                             <p><span style="font-size:12pt">&lt;DateReport&gt;</span></p>
 
                             <p><span style="font-size:12pt">&lt;UserName&gt;test-2222&lt;/UserName&gt;</span></p>
@@ -368,7 +373,7 @@
                             <p><span style="font-size:12pt">&lt;ldate&gt;01052013&lt;/ldate&gt;</span></p>
 
                             <p><span style="font-size:12pt">&lt;/DateReport&gt;</span></p>
-
+                                </code>
                             <p>&nbsp;</p>
 
                             <p><span style="font-size:12pt">Yukarıdaki XML ifadesinde;</span></p>
@@ -404,7 +409,7 @@
                             <p>&nbsp;</p>
 
                             <p><span style="font-size:12pt">&Ouml;rnek 6.2.1 ID Bazında Rapor i&ccedil;in gerekli XML ifadesi :</span></p>
-
+                            <code>
                             <p><span style="font-size:12pt">&lt;SingleReport&gt;</span></p>
 
                             <p><span style="font-size:12pt">&lt;UserName&gt;test-2222&lt;/UserName&gt;</span></p>
@@ -416,7 +421,7 @@
                             <p><span style="font-size:12pt">&lt;MsgID&gt;2776325&lt;/MsgID&gt;</span></p>
 
                             <p><span style="font-size:12pt">&lt;/SingleReport&gt;</span></p>
-
+                            </code>
                             <p>&nbsp;</p>
 
                             <p><span style="font-size:12pt">Yukarıdaki XML ifadesinde;</span></p>
@@ -436,7 +441,7 @@
                             <p><span style="font-size:12pt">XML ifadesi Gateway&rsquo;a ulaştığında iki &ccedil;eşit geri d&ouml;n&uuml;ş değeri alınır:</span></p>
 
                             <p><span style="font-size:12pt">1. İşlem başarılıysa: </span></p>
-
+                            <code>
                             <p><span style="font-size:12pt">905321234567 1</span></p>
 
                             <p><span style="font-size:12pt">905551234567 2</span></p>
@@ -452,7 +457,7 @@
                             <p><span style="font-size:12pt">3 (zaman aşımı)</span></p>
 
                             <p><span style="font-size:12pt">4 (iletilmedi)</span></p>
-
+                                </code>
                             <p><span style="font-size:12pt">2. Hata oluşmuşsa: Bknz. Hata Kodları</span></p>
 
 

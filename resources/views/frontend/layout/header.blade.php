@@ -56,32 +56,12 @@
         </div>
     </div>
 
-           {{-- <div class="info-bar sticky-info">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-9">
-                            <div class="info-left">
-                                <span><i class="flaticon-telephone"></i><strong>Telefon:</strong> 0216 822 01 11</span>
-                                <span><i class="fas fa-envelope-open"></i><strong>Mail:</strong> info@dinamiksms.com</span>
-                                <span><i class="fas fa-calendar"></i><strong>7/24</strong> Kesintisiz Hizmet</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="header-social">
-                                <a href="#"><i class="fab fa-facebook-f text-white"></i></a>
-                                <a href="#"><i class="fab fa-twitter text-white"></i></a>
-                                <a href="#"><i class="fab fa-linkedin text-white"></i></a>
-                                <a href="#"><i class="fab fa-instagram text-white"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>--}}
+
 
     <div class="bixol-navigation mt-3">
         <div class="container">
             <div class="bixol-nav">
-                <a href="i{{ route('home') }}" class="bixol-header-logo">
+                <a href="{{ route('home') }}" class="bixol-header-logo">
                     <img src="/dinamiklogo.png" alt="{{ config('app.name') }}">
                 </a>
 

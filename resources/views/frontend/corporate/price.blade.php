@@ -1,21 +1,16 @@
 @extends('frontend.layout.app')
 @section('content')
-{{--    <div class="get-in-touch mt-5">
+    <div class="bixol-breadcrumb" data-background="/frontend/images/banner.jpg">
         <div class="container">
-            <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(&quot;/frontend/images/home6/git-bg.jpg&quot;);">
-                <div class="row align-items-center">
-                    <div class="col-12">
-                        <div class="git-left">
-                            <p class="text-white text-center">www.dinamiksms.com TC. Bilgi Teknolojileri ve İletişim Kurumu (BTK) dan işletmeci yetkilendirmesine
-                                sahip <br>DİNAMİK TELEKOMÜNİKASYON BİLİŞİM SİSTEMLERİ SANAYİ VE TİCARET LTD.ŞTİ ad ve hesabına sunulmaktadır.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="breadcrumb-content">
+                <h1>SMS Fiyatları</h1>
+                <a href="{{ route('home') }}">Anasayfa <i class="fas fa-angle-double-right"></i></a>
+                <a href="#">Kurumsal <i class="fas fa-angle-double-right"></i></a>
+                <span>Fiyatlar</span>
             </div>
         </div>
-    </div>--}}
+    </div>
+
 
     <section class="home6-pricing-table pt-10 pb-10">
         <div class="container">

@@ -9,3 +9,10 @@
         <script src="/frontend/js/vendor/rs6.min.js"></script>
         <script src="/frontend/js/main.js"></script>
 
+        <script>
+            $(document).ready(function() {
+                $("table").addClass("table table-hover table-striped table-bordered table-responsive");
+            })
+        </script>
+
+
