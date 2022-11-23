@@ -75,7 +75,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-12">
                                             <div class="git-left">
-                                                <p class="text-white text-center">www.dinamiksms.com TC. Bilgi Teknolojileri ve İletişim Kurumu (BTK) dan işletmeci yetkilendirmesine
+                                                <p class="text-white text-center">TC. Bilgi Teknolojileri ve İletişim Kurumu (BTK) dan işletmeci yetkilendirmesine
                                                     sahip <br>DİNAMİK TELEKOMÜNİKASYON BİLİŞİM SİSTEMLERİ SANAYİ VE TİCARET LTD.ŞTİ ad ve hesabına sunulmaktadır.
                                                 </p>
                                             </div>
