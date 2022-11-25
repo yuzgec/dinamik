@@ -13,6 +13,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
 
+            $table->boolean('active')->default(1);
             $table->boolean('status')->default(1);
             $table->integer('rank')->nullable();
 

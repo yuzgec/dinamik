@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePriceTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('price', function (Blueprint $table) {
@@ -25,6 +21,7 @@ class CreatePriceTable extends Migration
             $table->string('seo_desc', 250)->nullable();
             $table->string('seo_key', 250)->nullable();
 
+            $table->boolean('active')->default(0);
             $table->boolean('status')->default(1);
             $table->integer('rank')->nullable();
 

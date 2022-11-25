@@ -4,7 +4,7 @@
 
     <div class="get-in-touch mt-30 mb-30">
         <div class="container">
-            <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(/frontend/images/home6/git-bg.jpg;);">
+            <div class="git-content" data-background="/frontend/images/git-bg.jpg" style="background-image: url(/frontend/images/home6/git-bg.jpg;);">
                 <div class="row align-items-center">
                     <div class="col-lg-8 col-md-6">
                         <div class="git-left">

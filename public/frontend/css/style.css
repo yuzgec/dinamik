@@ -6440,8 +6440,7 @@ i {
       max-width: 100%;
       width: auto;
       display: inline-block; }
-  .service-details .sr-details-content .sr-details-slider {
-    margin-top: 30px; }
+  .service-details .sr-details-content .sr-details-slider { }
     .service-details .sr-details-content .sr-details-slider .bixol-service-item {
       display: -webkit-box;
       display: -ms-flexbox;

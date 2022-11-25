@@ -40,6 +40,7 @@ Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function(
     Route::auto('/contact', ContactController::class);
     Route::auto('/features', FeaturesController::class);
     Route::auto('/reference', ReferenceController::class);
+    Route::auto('/price', PriceController::class);
 });
 
 require __DIR__.'/auth.php';
