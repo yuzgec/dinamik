@@ -8855,9 +8855,8 @@ i {
           background-color: #9ba2aa;
           color: #ffffff; }
 
-/************* Brand Area ****************/
 .home2-brand-area .brand-wrapper {
-  padding: 0 60px; }
+  padding: 0 0; }
   .home2-brand-area .brand-wrapper .img-wrapper {
     text-align: center;
     width: auto;
@@ -10798,8 +10797,8 @@ i {
 .home6-pricing-table {
   background-color: #f6f7fa; }
   .home6-pricing-table .home6-pricing {
-    margin-top: 60px;
-    padding: 0 70px; }
+    margin-top: 30px;
+    padding: 0 0; }
     .home6-pricing-table .home6-pricing .home6-pricing-column {
       background-color: #ffffff;
       padding: 30px 30px;

@@ -4,7 +4,7 @@
 
     <div class="get-in-touch mt-30 mb-30">
         <div class="container">
-            <div class="git-content" data-background="/frontend/images/git-bg.jpg" style="background-image: url(/frontend/images/home6/git-bg.jpg;);">
+            <div class="git-content" data-background="/frontend/images/git-bg.jpg" style="background-image: url(/frontend/images/git-bg.jpg;);">
                 <div class="row align-items-center">
                     <div class="col-lg-8 col-md-6">
                         <div class="git-left">
@@ -231,7 +231,7 @@
 
     <div class="get-in-touch mb-30 mt-30">
         <div class="container">
-            <div class="git-content" data-background="/frontend/images/home6/git-bg.jpg" style="background-image: url(&quot;/frontend/images/home6/git-bg.jpg&quot;);">
+            <div class="git-content" data-background="/frontend/images/git-bg.jpg" style="background-image: url('/frontend/images/git-bg.jpg')">
                 <div class="row align-items-center">
                     <div class="col-12">
                         <div class="git-left">
@@ -441,25 +441,33 @@
         </div>
     </section>
 
-    <div class="home2-brand-area pt-60 pb-60">
+    <div class="home2-brand-area home7-brands pt-60 pb-50">
         <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="bixol-title-area text-center">
+                        <h3>BAZI REFERANSLARIMIZ</h3>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="brand-wrapper">
                 <div class="row home2-brand-slider">
+
+                    @foreach($Reference as $item)
                     <div class="brand-single">
-                        <img src="http://www.dinamiksms.com.tr/dinamiktoplusms/saadet.png" alt="" width="150px">
+                        <div class="">
+                            <img src="{{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page')}}"
+                                 alt="{{ $item->title }}"
+                                 class="p-3"
+                                 width="220px">
+                        </div>
                     </div>
-                    <div class="brand-single">
-                        <img src="http://www.dinamiksms.com.tr/dinamiktoplusms/chp.png" alt="" width="150px">
-                    </div>
-                    <div class="brand-single">
-                        <img src="http://www.dinamiksms.com.tr/dinamiktoplusms/mhp.png" alt="" width="150px">
-                    </div>
-                    <div class="brand-single">
-                        <img src="http://www.dinamiksms.com.tr/dinamiktoplusms/akparti.png" alt="" width="150px">
-                    </div>
-                    <div class="brand-single">
-                        <img src="http://www.dinamiksms.com.tr/dinamiktoplusms/vestel.png" alt="" width="150px">
-                    </div>
+                    @endforeach
+
+
                 </div>
             </div>
 

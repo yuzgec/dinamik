@@ -36,9 +36,7 @@
                     <tbody id="orders">
                     @foreach($All as $item)
                     <tr id="page_{{$item->id}}">
-                        <td>
-                            <span class="avatar me-2" style="background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page')}})"></span>
-                        </td>
+                        <td><span class="avatar me-2" style="background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page')}})"></span></td>
                         <td>
                             <div class="font-weight-medium">
                                 <a href="{{ route('reference.edit', $item->id) }}" title="{{ $item->title }} - Düzenle">

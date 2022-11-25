@@ -314,7 +314,7 @@ Last change:    00/00/00
 
 				$(".home2-brand-slider").slick({
 					autoplay: true,
-					slidesToShow: 4,
+					slidesToShow: 8,
 					arrows: false,
 					responsive: [
 						{
