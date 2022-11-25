@@ -9,8 +9,8 @@
         <div class="container">
             <div class="breadcrumb-content">
                 <h1>{{ $Detay->title }}</h1>
-                <a href="/dinamik">Anasayfa <i class="fas fa-angle-double-right"></i></a>
-                <a href="/dinamik">Kurumsal <i class="fas fa-angle-double-right"></i></a>
+                <a href="{{ route('home') }}">Anasayfa <i class="fas fa-angle-double-right"></i></a>
+                <a href="#">Kurumsal <i class="fas fa-angle-double-right"></i></a>
                 <span>{{ $Detay->title }}</span>
             </div>
         </div>

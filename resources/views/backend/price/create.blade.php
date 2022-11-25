@@ -14,7 +14,7 @@
                 </div>
                 <div class="card-body">
                 <x-form-inputtext label="Adet" name="title"/>
-                <x-form-inputtext label="Fiyat" name="short"/>
+                <x-form-inputtext label="Fiyat" name="price"/>
                 <x-form-textarea label="Açıklama" name="desc" />
 
             </div>
@@ -29,8 +29,6 @@
     <script type="text/javascript">
 
         CKEDITOR.replace( 'aciklama', {
-            filebrowserUploadUrl: "{{ route('page.postUpload', ['_token' => csrf_token()]) }}",
-            filebrowserUploadMethod: 'form',
             height : 250,
             toolbar: [
                 { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold']},

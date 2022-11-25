@@ -12,14 +12,10 @@ class CreatePriceTable extends Migration
         Schema::create('price', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('slug');
+            $table->string('price');
 
             $table->integer('category')->default(1);
             $table->longText('desc')->nullable();
-
-            $table->string('seo_title', 250)->nullable();
-            $table->string('seo_desc', 250)->nullable();
-            $table->string('seo_key', 250)->nullable();
 
             $table->boolean('active')->default(0);
             $table->boolean('status')->default(1);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Faq;
 use App\Models\Page;
+use App\Models\Price;
 use App\Models\Reference;
 use App\Models\Service;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -18,7 +19,8 @@ class HomeController extends Controller
         SEOMeta::setCanonical(url()->full());
         $Reference = Reference::all();
         $Faq =  Faq::all();
-        return view('frontend.index' ,compact('Faq', 'Reference'));
+        $Price = Price::all();
+        return view('frontend.index' ,compact('Faq', 'Reference', 'Price'));
 
     }
 
@@ -95,7 +97,7 @@ class HomeController extends Controller
     public function corporatedetail($url){
 
         $Detay = Page::where('slug', '=', $url)->firstOrFail();
-        SEOMeta::setTitle($Detay->title.' | Online Destek | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setTitle($Detay->title.' | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setCanonical(url()->full());
         return view('frontend.corporate.detail', compact('Detay'));

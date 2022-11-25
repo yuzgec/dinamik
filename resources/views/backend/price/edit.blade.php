@@ -1,7 +1,7 @@
 @extends('backend.layout.app')
-@section('title', $Edit->title.' | S.S.S. Düzenle')
+@section('title', $Edit->title.' | Fiyat Düzenle')
 @section('content')
-    {{Form::model($Edit, ["route" => ["faq.update", $Edit->id]])}}
+    {{Form::model($Edit, ["route" => ["price.update", $Edit->id]])}}
     @method('PUT')
     <div class="row">
         <div class="col-12">
@@ -11,7 +11,7 @@
                     <div class="d-flex">
                         <h4 class="card-title justify-content-center align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            S.S.S. Düzenle [ {{$Edit->title }}]
+                            Fiyat Düzenle [ {{$Edit->title }}]
                         </h4>
                     </div>
                     <div>
@@ -26,9 +26,8 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <x-form-inputtext label="Başlık Adı Giriniz" name="title"/>
-                    <x-form-select label="Kategori" name="category" :list="$Kategori"/>
-                    <x-form-textarea label="Kısa Açıklama" name="short" :ck=null/>
+                    <x-form-inputtext label="Adet" name="title"/>
+                    <x-form-inputtext label="Fiyat" name="price"/>
                     <x-form-textarea label="Açıklama" name="desc" />
                 </div>
             </div>
@@ -43,9 +42,7 @@
     <script type="text/javascript">
 
         CKEDITOR.replace( 'aciklama', {
-            filebrowserUploadUrl: "{{ route('page.postUpload', ['_token' => csrf_token()]) }}",
-            filebrowserUploadMethod: 'form',
-            height : 500,
+            height : 300,
             toolbar: [
                 { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold']},
                 { name: 'paragraph',items: [ 'BulletedList']},

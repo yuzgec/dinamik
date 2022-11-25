@@ -24,7 +24,7 @@ class PriceController extends Controller
     {
         $New = new Price;
         $New->title = $request->title;
-        $New->short = $request->short;
+        $New->price = $request->price;
         $New->desc = $request->desc;
         $New->save();
 
@@ -49,7 +49,7 @@ class PriceController extends Controller
     {
         $Update = Price::findOrFail($id);
         $Update->title = $request->title;
-        $Update->short = $request->short;
+        $Update->price = $request->price;
         $Update->desc = $request->desc;
         $Update->save();
 
