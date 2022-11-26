@@ -30,7 +30,7 @@
                                         </div>
                                         <div class="column-content">
                                             <h5>Adresimiz</h5>
-                                            <p>{{ config('settings.adres1') }}</p>
+                                            <p>{{ config('settings.adres2') }}</p>
                                         </div>
                                     </div>
                                 </div>

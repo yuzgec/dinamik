@@ -85,7 +85,7 @@
         </div>
     </section>
 
-    <section class="home6-choose-us">
+    <section class="home6-choose-us mt-40 mb-20">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-2 order-lg-1">
@@ -184,7 +184,9 @@
 
                             <div class="srv2-service-content">
                                 <a href="#"><h5>SMS Hizmeti</h5></a>
-                                <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
+                                <span class="ucsatir">
+                                    <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
+                                </span>
                                 <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
                             </div>
                         </div>
@@ -297,7 +299,7 @@
                             <div class="col-lg-6 order-2 order-lg-1">
                                 <div class="pmv-content">
                                     <h4>{{ $item->title }}</h4>
-                                    {{ $item->short }}
+                                   {{ $item->short }}
                                 </div>
                                 <div class="pmv-content">
                                 <a href="{{ route(service($item->id), $item->slug) }}" class="bixol-primary-btn">Detaylı Bilgi İçin</a>
@@ -390,6 +392,7 @@
         </div>
     </div>
 
+{{--
 
     <section class="home6-blog-area pt-50">
         <div class="container">
@@ -482,6 +485,7 @@
         </div>
     </section>
 
+--}}
 
 @endsection
 @section('customJS')

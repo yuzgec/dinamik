@@ -12170,3 +12170,25 @@ i {
 .home7-brands .brand-wrapper .img-wrapper img {
   -webkit-filter: grayscale(0);
   filter: grayscale(0); }
+
+
+.birsatir {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.ikisatir {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.ucsatir {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

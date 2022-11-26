@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PageRequest;
 use App\Models\Page;
 use App\Models\PageCategory;
-use App\Models\PageGallery;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Artisan;
 
 class PageController extends Controller
 {
+
+    public function __construct(){
+        Artisan::call('cache:clear');
+    }
+
     public function index()
     {
         $All = Page::with('getCategory')->orderBy('rank')->get();

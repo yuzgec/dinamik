@@ -6,9 +6,15 @@ use App\Http\Requests\FeaturesRequest;
 use App\Models\Features;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class FeaturesController extends Controller
 {
+
+    public function __construct(){
+        Artisan::call('cache:clear');
+    }
+
     public function index()
     {
         $All = Features::all();

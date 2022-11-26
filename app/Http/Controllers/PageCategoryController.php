@@ -5,10 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PageCategoryRequest;
 use App\Models\PageCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Redirect;
 
 class PageCategoryController extends Controller
 {
+    public function __construct(){
+        Artisan::call('cache:clear');
+    }
 
     public function index()
     {

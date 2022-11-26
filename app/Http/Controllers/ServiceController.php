@@ -6,9 +6,15 @@ use App\Http\Requests\ServiceRequest;
 use App\Models\Service;
 use App\Models\ServiceCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class ServiceController extends Controller
 {
+
+    public function __construct(){
+        Artisan::call('cache:clear');
+    }
+
     public function index()
     {
         $All = Service::with('getCategory')->orderBy('rank')->get();

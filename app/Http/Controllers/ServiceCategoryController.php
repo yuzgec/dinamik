@@ -5,10 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ServiceCategoryRequest;
 use App\Models\ServiceCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Redirect;
 
 class ServiceCategoryController extends Controller
 {
+    public function __construct(){
+        Artisan::call('cache:clear');
+    }
 
     public function index()
     {
