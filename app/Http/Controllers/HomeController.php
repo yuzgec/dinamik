@@ -75,8 +75,8 @@ class HomeController extends Controller
     }
 
     public function sss(){
-        SEOMeta::setTitle('Api | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
-        SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setTitle('Sıkça Sorulan Sorular | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj | Sıkça Sorulan Sorular ');
         SEOMeta::setCanonical(url()->full());
 
         $All = Faq::all();
