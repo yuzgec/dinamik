@@ -71,7 +71,7 @@
                                     <a href="#" class="mb-1">Planı Seç</a>
                                 </div>--}}
                                 <div class="header-btn">
-                                    <a href="{{ route('iletisim') }}" class="home5-primary-btn" style="width:170px">Bilgi Al
+                                    <a href="{{ route('contactus') }}" class="home5-primary-btn" style="width:170px">Bilgi Al
                                         <span><i class="fas fa-long-arrow-alt-right"></i></span>
                                     </a>
                                 </div>
