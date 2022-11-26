@@ -74,6 +74,15 @@ class HomeController extends Controller
         return view('frontend.service.api');
     }
 
+    public function sss(){
+        SEOMeta::setTitle('Api | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setCanonical(url()->full());
+
+        $All = Faq::all();
+        return view('frontend.corporate.faq',compact('All'));
+    }
+
     public function servicedetail($url){
         $Detay = Service::where('slug', '=', $url)->firstOrFail();
 
