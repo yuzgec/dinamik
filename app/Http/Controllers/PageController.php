@@ -62,11 +62,7 @@ class PageController extends Controller
 
     public function edit($id)
     {
-
-
         $Edit = Page::findOrFail($id);
-
-        //dd($Edit->getMedia('page'));
         $Kategori = PageCategory::pluck('title', 'id');
         return view('backend.page.edit', compact('Edit', 'Kategori'));
     }
