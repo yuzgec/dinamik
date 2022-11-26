@@ -19,7 +19,7 @@ class HomeController extends Controller
         SEOMeta::setCanonical(url()->full());
         $Reference = Reference::all();
         $Faq =  Faq::all();
-        $Price = Price::all();
+        $Price = Price::where('active',1)->get();
         return view('frontend.index' ,compact('Faq', 'Reference', 'Price'));
 
     }

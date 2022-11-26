@@ -26,7 +26,9 @@
                 <table class="table table-hover table-striped table-bordered table-center">
                     <thead>
                         <tr>
-                            <th>Başlık</th>
+                            <th>Adet</th>
+                            <th>Fiyat</th>
+                            <th>Anasayfa</th>
                             <th>Durum</th>
                             <th class="d-none d-lg-table-cell">Oluşturma Tarihi</th>
                             <th class="w-1"></th>
@@ -38,6 +40,14 @@
 
                         <td>
                             <div class="font-weight-medium">{{ $item->title }}</div>
+                        </td>
+                        <td>
+                            <div class="font-weight-medium">{{ $item->price }}</div>
+                        </td>
+                        <td class="text-center">
+                            <label class="form-check form-check-single form-switch">
+                                <input class="form-check-input switch" active-id="{{ $item->id }}"  type="checkbox" @if ($item->active == 1) checked @endif>
+                            </label>
                         </td>
                         <td class="text-center">
                             <label class="form-check form-check-single form-switch">
@@ -56,7 +66,7 @@
                                         Eylemler
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item justify-content-between" href="{{ route('faq.edit', $item->id) }}" title="Düzenle">
+                                        <a class="dropdown-item justify-content-between" href="{{ route('price.edit', $item->id) }}" title="Düzenle">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 15l8.385 -8.415a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3z" /><path d="M16 5l3 3" /><path d="M9 7.07a7.002 7.002 0 0 0 1 13.93a7.002 7.002 0 0 0 6.929 -5.999" /></svg>
                                             Düzenle
                                         </a>
@@ -133,6 +143,16 @@
                 $.get("{{route('price.getSwitch')}}", {id:id,status:status},
                     () => {
                         if(status) {}
+                    });
+            });
+
+            $('.switch').change(function() {
+                const id = $(this)[0].getAttribute('active-id');
+                const active = $(this).prop('checked');
+
+                $.get("{{route('price.getHome')}}", {id:id,active:active},
+                    () => {
+                        if(active) {}
                     });
             })
         })

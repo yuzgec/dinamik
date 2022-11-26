@@ -79,4 +79,10 @@ class PriceController extends Controller
         $update->status = $request->status == "true" ? 1 : 0 ;
         $update->save();
     }
+
+    public function getHome(Request $request){
+        $update=Price::findOrFail($request->id);
+        $update->active = $request->active == "true" ? 1 : 0 ;
+        $update->save();
+    }
 }
