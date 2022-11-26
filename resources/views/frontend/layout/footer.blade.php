@@ -1,5 +1,7 @@
 <div class="container">
+    <br>
     @include('frontend.layout.bilgi')
+    <br>
 </div>
 
      <footer class="bixol-footer" >

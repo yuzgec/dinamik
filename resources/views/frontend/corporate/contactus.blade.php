@@ -30,7 +30,7 @@
                                         </div>
                                         <div class="column-content">
                                             <h5>Adresimiz</h5>
-                                            <p>Örnek Mahallesi Adnan Menderes Cad. No:4-6A Ataşehir / İSTANBUL</p>
+                                            <p>{{ config('settings.adres1') }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -41,8 +41,8 @@
                                         </div>
                                         <div class="column-content">
                                             <h5>Telefon Numaralaramız</h5>
-                                            <p>0216 822 01 11 </p>
-                                            <p>0850 678 01 11 </p>
+                                            <p>{{ config('settings.telefon1') }} </p>
+                                            <p>{{ config('settings.telefon2') }} </p>
                                         </div>
                                     </div>
                                 </div>
@@ -52,8 +52,8 @@
                                             <i class="flaticon flaticon-mail"></i>
                                         </div>
                                         <div class="column-content">
-                                            <h5>Email ADresimiz</h5>
-                                            <p>info@dinamiksms.com </p>
+                                            <h5>Email Adresimiz</h5>
+                                            <p>{{ config('settings.email1') }} </p>
                                         </div>
                                     </div>
                                 </div>

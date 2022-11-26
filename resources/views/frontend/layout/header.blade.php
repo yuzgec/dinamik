@@ -1,5 +1,3 @@
-
-
 <header class="bixol-header bg-sticky-white">
 
     <div class="bixol-header-top">
@@ -14,7 +12,7 @@
                                         </span>
                                 <div class="bixol-item-content">
                                     <label>Bilgi & Satış:</label>
-                                    <span>0216 822 01 11</span>
+                                    <span>{{ config('settings.telefon1') }}</span>
                                 </div>
                                 <a href="tel:0216 822 01 11"></a>
                             </div>
@@ -24,7 +22,7 @@
                                         </span>
                                 <div class="bixol-item-content">
                                     <label>Whatsapp:</label>
-                                    <span>0216 822 01 11</span>
+                                    <span>{{ config('settings.whatsapp') }}</span>
                                 </div>
                             </div>
                         </div>
@@ -37,7 +35,7 @@
                                         </span>
                                 <div class="bixol-item-content">
                                     <label>Email</label>
-                                    <span>info@dinamiksms.com</span>
+                                    <span>{{ config('settings.email1') }}</span>
                                 </div>
                                 <a href="tel:1234563257"></a>
                             </div>
@@ -46,7 +44,7 @@
                                             <i class="flaticon flaticon-pin"></i>
                                         </span>
                                 <div class="bixol-item-content">
-                                    <label>Örnek Mah. Adnan Menderes Cad. No:4-6A Ataşehir</label>
+                                    <label>{{ config('settings.adres1') }}</label>
                                 </div>
                             </div>
                         </div>
