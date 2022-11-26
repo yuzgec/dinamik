@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Setting;
 use App\View\Components\Form\InputEmail;
 use App\View\Components\Form\InputFile;
 use App\View\Components\Form\InputPassword;
@@ -27,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
         Carbon::setLocale(config('app.locale'));
+        config()->set('settings', Setting::pluck('value','item')->all());
         URL::forceScheme('https');
         Blade::component('form-inputtext', InputText::class);
         Blade::component('form-select', SelectBox::class);
