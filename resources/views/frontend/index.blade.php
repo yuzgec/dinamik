@@ -351,8 +351,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-5">
-                    <img src="/frontend/images/services/srd-img.png">
+                <div class="col-md-4 mt-5 d-flex justify-content-center" >
+                    <img src="/iys.svg">
                 </div>
 
             </div>
