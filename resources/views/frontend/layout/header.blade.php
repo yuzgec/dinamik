@@ -77,7 +77,9 @@
                                 @endforeach
                                 <li><a href="{{ route('bankinfo') }}">Banka Hesap Bilgileri</a></li>
                                 <li><a href="{{ route('sss') }}">Sıkça Sorulan Sorular</a></li>
+{{--
                                 <li><a href="{{ route('news') }}">Blog ve Haberler</a></li>
+--}}
                             </ul>
                         </li>
                         @foreach($ServiceCategory as $item)
