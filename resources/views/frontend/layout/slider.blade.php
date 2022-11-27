@@ -31,23 +31,6 @@
                         style="z-index:10;font-family:'Poppins';text-shadow: 2px 2px 2px #fff;"
                     >Dinamik SMS'ile<br />Hızlı ve Ekonomik<br /> SMS hizmeti
                     </rs-layer>
-
-                    <!--            <rs-layer
-                                    id="slider-3-slide-7-layer-4"
-                                    data-type="text"
-                                    data-xy="yo:274px,274px,220px,185px;"
-                                    data-text="w:normal;s:18,18,18,16;l:28,28,28,26;fw:500;"
-                                    data-dim="w:540px,540px,460px,240px;"
-                                    data-rsp_o="off"
-                                    data-rsp_bd="off"
-                                    data-frame_0="y:50;"
-                                    data-frame_1="st:1750;sp:1000;sR:1750;"
-                                    data-frame_999="o:0;st:w;sR:6250;"
-                                    style="z-index:11;font-family:'Rubik';"
-                                >Bixol is professionalism in the cleaning industry by providing top-quality cleaning and related services
-                                </rs-layer>-->
-
-
                 </rs-group>
 
                 <rs-layer
@@ -92,23 +75,6 @@
                         style="z-index:10;font-family:'Poppins';text-shadow: 2px 2px 2px #fff;"
                     >Dinamik SMS'ile<br />Hızlı ve Ekonomik<br /> SMS hizmeti
                     </rs-layer>
-
-                    <!--            <rs-layer
-                                    id="slider-3-slide-7-layer-4"
-                                    data-type="text"
-                                    data-xy="yo:274px,274px,220px,185px;"
-                                    data-text="w:normal;s:18,18,18,16;l:28,28,28,26;fw:500;"
-                                    data-dim="w:540px,540px,460px,240px;"
-                                    data-rsp_o="off"
-                                    data-rsp_bd="off"
-                                    data-frame_0="y:50;"
-                                    data-frame_1="st:1750;sp:1000;sR:1750;"
-                                    data-frame_999="o:0;st:w;sR:6250;"
-                                    style="z-index:11;font-family:'Rubik';"
-                                >Bixol is professionalism in the cleaning industry by providing top-quality cleaning and related services
-                                </rs-layer>-->
-
-
                 </rs-group>
 
                 <rs-layer

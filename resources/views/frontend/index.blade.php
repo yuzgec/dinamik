@@ -57,7 +57,7 @@
                                 <div class="price-area">
                                     <h2>{{ $item->price }}₺</h2>
                                 </div>
-                                <div class="feature-list">
+                               {{-- <div class="feature-list">
                                     <ul>
                                         <li>Başlıklı Sms Gönderimi</li>
                                         <li>Anlık Detaylı Raporlama</li>
@@ -66,7 +66,7 @@
                                         <li>Kolay Excel Aktarım</li>
                                         <li>KDV Dahil</li>
                                     </ul>
-                                </div>
+                                </div>--}}
                            {{--     <div class="price-btn">
                                     <a href="#" class="mb-1">Planı Seç</a>
                                 </div>--}}
