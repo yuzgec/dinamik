@@ -2,6 +2,9 @@
 @section('content')
 
     <div class="bixol-breadcrumb" data-background="/frontend/images/banner.jpg">
+         <span class="breadcrumb-object">
+            <img src="/frontend/images/email-icon.png" alt="{{ config('app.name') }}">
+        </span>
         <div class="container">
             <div class="breadcrumb-content">
                 <h1>{{ $Detay->title }}</h1>
