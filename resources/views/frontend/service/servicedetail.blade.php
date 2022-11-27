@@ -22,7 +22,7 @@
 
 
                     @foreach($ServiceCategory->whereIn('id',[1,$Detay->id]) as $item)
-                        <div class="sidebar-widget sr-list-widget">
+                            <div class="sidebar-widget sr-list-widget cerceve p-2">
                             <div class="widget-title">
                                 <h5>{{ $item->title }}</h5>
                             </div>
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                         @endforeach
-                        <div class="sidebar-widget sr-list-widget">
+                        <div class="sidebar-widget sr-list-widget cerceve p-2">
                             <div class="widget-title">
                                 <h5>Kurumsal</h5>
                             </div>

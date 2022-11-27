@@ -20,7 +20,7 @@
                         @include('frontend.layout.sozlesme')
 
                         @foreach($ServiceCategory->whereIn('id',[1,$Detay->id]) as $item)
-                            <div class="sidebar-widget sr-list-widget" style="border:1px solid #0c52c2;padding: 10px;border-radius: 5px">
+                            <div class="sidebar-widget sr-list-widget cerceve p-2">
                                 <div class="widget-title">
                                     <h5>{{ $item->title }}</h5>
                                 </div>
@@ -40,7 +40,7 @@
 
 
 
-                        <div class="sidebar-widget sr-list-widget">
+                        <div class="sidebar-widget sr-list-widget cerceve p-2">
                             <div class="widget-title">
                                 <h5>Kurumsal</h5>
                             </div>

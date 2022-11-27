@@ -178,14 +178,16 @@
 
                         <div class="srv2-service-content">
                             <h5>{{ $item->title }}</h5>
-                            <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
+                            <span class="ucsatir">
+                            {!! $item->short !!}
+                            </span>
                         </div>
                         <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
 
                             <div class="srv2-service-content">
                                 <a href="#"><h5>SMS Hizmeti</h5></a>
                                 <span class="ucsatir">
-                                    <p>Hedef kitlenize isterseniz kendi başlığınız ile isterseniz de size özel DinamikSMS abone numaranız ile SMS gönderin.</p>
+                                    {!! $item->short !!}
                                 </span>
                                 <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
                             </div>

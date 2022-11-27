@@ -142,7 +142,8 @@
 /******************* Header 2 Menu ******************/
 @media (max-width: 991.98px) {
   .header-style-2 .desktop-menu-wrapper {
-    display: none; } }
+    display: none; }
+}
 
 .header-style-2 .desktop-menu {
   padding-left: 30px; }
@@ -419,10 +420,14 @@
   .bixol-header .bixol-mobile-header {
     display: none;
     padding: 6px 0; }
-    .bixol-header .bixol-mobile-header a {
-      width: 130px;
-      display: inline-block; }
-  @media (max-width: 1199.98px) {
+
+
+  .cerceve{
+      border:1px solid #0c52c2;
+      border-radius: 5px;
+  }
+
+@media (max-width: 1199.98px) {
     .bixol-header .bixol-header-top {
       display: none; }
     .bixol-header .bixol-navigation .bixol-nav {
@@ -431,7 +436,9 @@
       display: block; } }
   @media (max-width: 575.98px) {
     .bixol-header .bixol-info-bar {
-      display: none; } }
+      display: none;
+        width: 130px;} }
+
 
 .bixol-mobile-hamburger {
   float: right;
