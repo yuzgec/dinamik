@@ -10847,7 +10847,8 @@ i {
           color: #001c8f;
           font-weight: 500;
           border-top: 1px solid #eaeaea;
-          padding: 8px 0; }
+          padding: 8px 0;
+        list-style: none}
           .home6-pricing-table .home6-pricing .home6-pricing-column .feature-list ul li:last-child {
             border-bottom: 1px solid #eaeaea; }
       .home6-pricing-table .home6-pricing .home6-pricing-column .price-area {
