@@ -69,31 +69,31 @@
                                 <div class="col-sm-6">
                                     <div class="name-field">
                                         <label for="your-name">Adınız Soyadınız</label>
-                                        <input type="text" id="your-name">
+                                        <input type="text" name="adsoyad">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mail-field">
                                         <label for="email-address">Email Adresiniz</label>
-                                        <input type="email" id="email-address" >
+                                        <input type="email" name="email">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="phone-field">
                                         <label for="phone-number">Telefon Numaranız</label>
-                                        <input type="tel" id="phone-number" >
+                                        <input type="tel" name="telefon" >
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="phone-field">
                                         <label for="phone-number">Konu</label>
-                                        <input type="tel" id="phone-number" >
+                                        <input type="text" >
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="message-field">
                                         <label for="message">Mesajınız</label>
-                                        <textarea  rows="9" id="message"></textarea>
+                                        <textarea  rows="9"></textarea>
                                     </div>
                                 </div>
                             </div>

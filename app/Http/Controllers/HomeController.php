@@ -47,8 +47,9 @@ class HomeController extends Controller
         SEOMeta::setTitle('Sms Fiyat Listesi | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setCanonical(url()->full());
+        $Price = Price::all();
 
-        return view('frontend.corporate.price');
+        return view('frontend.corporate.price',compact('Price'));
     }
 
     public function support(){
