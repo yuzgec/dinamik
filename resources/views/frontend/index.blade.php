@@ -178,7 +178,7 @@
 
                         <div class="srv2-service-content">
                             <h5>{{ $item->title }}</h5>
-                            <span class="ucsatir">
+                            <span class="ucsatir mt-3">
                             {!! $item->short !!}
                             </span>
                         </div>
@@ -188,7 +188,7 @@
                                 <a href="{{ route('servicedetail', $item->slug) }}" title="{{ $item->title }}">
                                     <h5>{{ $item->title }}</h5>
                                 </a>
-                                <span class="ucsatir">
+                                <span class="ucsatir text-white mt-3">
                                     {!! $item->short !!}
                                 </span>
                                 <a href="{{ route('servicedetail', $item->slug) }}" class="srv2-readmore-btn" title="{{ $item->title }}">
