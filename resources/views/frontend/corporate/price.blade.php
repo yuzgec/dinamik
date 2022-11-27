@@ -26,7 +26,7 @@
                                 <div class="price-area">
                                     <h2>{{ $item->price }}₺</h2>
                                 </div>
-                                <div class="feature-list">
+                              {{--  <div class="feature-list">
                                     <ul>
                                         <li>Başlıklı Sms Gönderimi</li>
                                         <li>Anlık Detaylı Raporlama</li>
@@ -35,15 +35,15 @@
                                         <li>Kolay Excel Aktarım</li>
                                         <li>KDV Dahil</li>
                                     </ul>
-                                </div>
+                                </div>--}}
                                 {{--     <div class="price-btn">
                                          <a href="#" class="mb-1">Planı Seç</a>
                                      </div>--}}
-                                <div class="header-btn">
+                           {{--     <div class="header-btn">
                                     <a href="{{ route('contactus') }}" class="home5-primary-btn" style="width:170px">Bilgi Al
                                         <span><i class="fas fa-long-arrow-alt-right"></i></span>
                                     </a>
-                                </div>
+                                </div>--}}
                             </div>
                         </div>
 

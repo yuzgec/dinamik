@@ -66,15 +66,15 @@
                                         <li>Kolay Excel Aktarım</li>
                                         <li>KDV Dahil</li>
                                     </ul>
-                                </div>--}}
-                           {{--     <div class="price-btn">
+                                </div>
+                             <div class="price-btn">
                                     <a href="#" class="mb-1">Planı Seç</a>
-                                </div>--}}
+                                </div>
                                 <div class="header-btn">
                                     <a href="{{ route('contactus') }}" class="home5-primary-btn" style="width:170px">Bilgi Al
                                         <span><i class="fas fa-long-arrow-alt-right"></i></span>
                                     </a>
-                                </div>
+                                </div>--}}
                             </div>
                         </div>
 
