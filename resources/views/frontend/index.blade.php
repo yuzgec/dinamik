@@ -211,7 +211,7 @@
                     <div class="bixol-services">
                         <div class="bixol-service-item">
                             <div class="bixol-icon-wrapper">
-                                <span><i class="flaticon flaticon-return"></i></span>
+                                <span><i class="flaticon flaticon-send"></i></span>
                             </div>
                             <div class="bixol-service-content">
                                 <a href=""><h6>HEMEN İADE</h6></a>
@@ -220,7 +220,7 @@
                         </div>
                         <div class="bixol-service-item">
                             <div class="bixol-icon-wrapper">
-                                <span><i class="flaticon flaticon-return"></i></span>
+                                <span><i class="flaticon flaticon-send"></i></span>
                             </div>
                             <div class="bixol-service-content">
                                 <a href="#"><h6>LİSANSLI FİRMA</h6></a>
@@ -229,7 +229,7 @@
                         </div>
                         <div class="bixol-service-item">
                             <div class="bixol-icon-wrapper">
-                                <span><i class="flaticon flaticon-return"></i></span>
+                                <span><i class="flaticon flaticon-send"></i></span>
                             </div>
                             <div class="bixol-service-content">
                                 <a href="#"><h6>GERÇEK ZAMANLI RAPOR</h6></a>
@@ -255,7 +255,7 @@
                     <div class="bixol-services">
                         <div class="bixol-service-item">
                             <div class="bixol-icon-wrapper">
-                                <span><i class="flaticon flaticon-return"></i></span>
+                                <span><i class="flaticon flaticon-send"></i></span>
                             </div>
                             <div class="bixol-service-content">
                                 <a href="#"><h6>İLETİ YÖNETİM SİSTEMİ</h6></a>
@@ -264,7 +264,7 @@
                         </div>
                         <div class="bixol-service-item">
                             <div class="bixol-icon-wrapper">
-                                <span><i class="flaticon flaticon-return"></i></span>
+                                <span><i class="flaticon flaticon-send"></i></span>
                             </div>
                             <div class="bixol-service-content">
                                 <a href="#"><h6>TEK FİYAT</h6></a>
@@ -273,7 +273,7 @@
                         </div>
                         <div class="bixol-service-item">
                             <div class="bixol-icon-wrapper">
-                                <span><i class="flaticon flaticon-return"></i></span>
+                                <span><i class="flaticon flaticon-send"></i></span>
                             </div>
                             <div class="bixol-service-content">
                                 <a href="#"><h6>2 YIL GEÇERLİ</h6></a>
@@ -377,7 +377,7 @@
             </div>
 
 
-            <div class="brand-wrapper">
+       {{--     <div class="brand-wrapper">
                 <div class="row home2-brand-slider">
 
                     @foreach($Reference as $item)
@@ -393,7 +393,7 @@
 
 
                 </div>
-            </div>
+            </div>--}}
 
         </div>
     </div>
