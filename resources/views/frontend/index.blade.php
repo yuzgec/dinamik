@@ -185,11 +185,15 @@
                         <div class="srv2-hover-item" data-background="/frontend/images/services/01.jpg">
 
                             <div class="srv2-service-content">
-                                <a href="#"><h5>SMS Hizmeti</h5></a>
+                                <a href="{{ route('servicedetail', $item->slug) }}" title="{{ $item->title }}">
+                                    <h5>{{ $item->title }}</h5>
+                                </a>
                                 <span class="ucsatir">
                                     {!! $item->short !!}
                                 </span>
-                                <a href="#" class="srv2-readmore-btn">İncele<i class="fas fa-angle-right"></i></a>
+                                <a href="{{ route('servicedetail', $item->slug) }}" class="srv2-readmore-btn" title="{{ $item->title }}">
+                                    İncele<i class="fas fa-angle-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>

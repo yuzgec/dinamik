@@ -24,7 +24,6 @@
 
                         @include('frontend.layout.sozlesme')
 
-
                         <div class="sidebar-widget sr-list-widget cerceve p-2">
                             <div class="widget-title">
                                 <h5>Kurumsal</h5>
