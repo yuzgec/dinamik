@@ -365,7 +365,7 @@
         </div>
     </section>
 
-    <div class="home2-brand-area home7-brands pt-60 pb-50">
+{{--    <div class="home2-brand-area home7-brands pt-60 pb-50">
         <div class="container">
 
             <div class="row">
@@ -377,7 +377,7 @@
             </div>
 
 
-       {{--     <div class="brand-wrapper">
+            <div class="brand-wrapper">
                 <div class="row home2-brand-slider">
 
                     @foreach($Reference as $item)
@@ -393,10 +393,10 @@
 
 
                 </div>
-            </div>--}}
+            </div>
 
         </div>
-    </div>
+    </div>--}}
 
 {{--
 
