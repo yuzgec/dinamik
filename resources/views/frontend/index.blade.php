@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="git-btn home6-secondary-btn">
-                            <a href="#"><span><i class="flaticonv2 flaticonv2-telephone-call"></i></span>0216 465 45 70 </a>
+                            <a href="tel:{{ config('settings.telefon1') }}"><span><i class="flaticonv2 flaticonv2-telephone-call"></i></span>{{ config('settings.telefon1') }} </a>
                         </div>
                     </div>
                 </div>
