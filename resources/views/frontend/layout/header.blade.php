@@ -95,7 +95,7 @@
                         @endforeach
                         <li><a href="{{ route('api') }}">APİ</a></li>
                         <li><a href="{{ route('contactus') }}">İletişim</a></li>
-                        <li><a href="panel.dinamiksms.com.tr">Abone Girişi</a></li>
+                        <li><a href="http://panel.dinamiksms.com.tr/" target="_blank">Abone Girişi</a></li>
                     </ul>
                 </nav>
             </div>
@@ -163,6 +163,6 @@
         <li><a href="{{ route('api') }}">APİ</a></li>
         <li><a href="{{ route('price') }}">Fiyatlar</a></li>
         <li><a href="{{ route('contactus') }}">İletişim</a></li>
-        <li><a href="{{ route('home') }}">Giriş Yap</a></li>
+        <li><a href="http://panel.dinamiksms.com.tr/" target="_blank">Giriş Yap</a></li>
     </ul>
 </div>
