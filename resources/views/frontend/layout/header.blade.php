@@ -37,7 +37,7 @@
                                     <label>Email</label>
                                     <span>{{ config('settings.email1') }}</span>
                                 </div>
-                                <a href="mailto:config('settings.email1')"></a>
+                                <a href="mailto:{{ config('settings.email1') }}"></a>
                             </div>
                             <div class="bixol-header-item">
                                 <span class="bixol-icon-wrapper">
