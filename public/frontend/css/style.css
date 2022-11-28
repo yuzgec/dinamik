@@ -1,11 +1,9 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 .bixol-navigation .desktop-menu {
-  padding: 0 40px; }
+  padding: 0 20px; }
   .bixol-navigation .desktop-menu ul {
     text-align: right; }
     .bixol-navigation .desktop-menu ul li {
@@ -42,7 +40,7 @@
       .bixol-navigation .desktop-menu ul li.has-submenu ul {
         position: absolute;
         top: calc(100% + 10px);
-        left: 0;
+        left: -30px;
         min-width: 250px;
         background-color: #ffffff;
         -webkit-box-shadow: 0px 0px 43px 0px rgba(12, 12, 12, 0.16);

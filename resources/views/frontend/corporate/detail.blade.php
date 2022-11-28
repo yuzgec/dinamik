@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <section class="service-details pt-100 pb-100">
+    <section class="service-details pt-100 pb-50">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">

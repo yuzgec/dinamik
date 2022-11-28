@@ -11,10 +11,36 @@
         </div>
     </div>
 
-    <section class="contact-v2 pt-100 pb-100">
+    <section class="service-details pt-50 pb-50">
         <div class="container">
             <div class="row">
+                <table>
+                    <tbody>
+                        <thead>
+                            <th>
+                                Banka
+                            </th>
+                            <th>
+                                IBAN
+                            </th>
+                            <th>
+                                Firma Adı
+                            </th>
+                        </thead>
+                        <tr>
+                            <td >
+                                <img src="/turkiyefinans.png"  style="width: 150px">
+                            </td>
+                            <td>
+                                <br>TR720020600158026885620001
+                            </td>
+                            <td class="">
+                                <br>DİNAMİK TELEKOMÜNİKASYON BİLİŞİM SİSTEMLERİ SANAYİ VE TİCARET LTD.ŞTİ
+                            </td>
+                        </tr>
 
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
