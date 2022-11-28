@@ -94,12 +94,8 @@
                         </li>
                         @endforeach
                         <li><a href="{{ route('api') }}">APİ</a></li>
-{{--
-                        <li><a href="{{ route('price') }}">Fiyatlar</a></li>
---}}
                         <li><a href="{{ route('contactus') }}">İletişim</a></li>
-                        <li><a href="{{ route('home') }}">Bireysel</a></li>
-                        <li><a href="{{ route('home') }}">Kurumsal</a></li>
+                        <li><a href="panel.dinamiksms.com.tr">Abone Girişi</a></li>
                     </ul>
                 </nav>
             </div>
