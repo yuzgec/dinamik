@@ -1,7 +1,6 @@
 @extends('frontend.layout.app')
 @section('content')
     @include('frontend.layout.slider')
-
     <div class="get-in-touch mt-30 mb-30">
         <div class="container">
             <div class="git-content" data-background="/frontend/images/git-bg.jpg" style="background-image: url(/frontend/images/git-bg.jpg;);">
@@ -42,7 +41,7 @@
         </div>
     </div>--}}
 
-
+{{--
     <section class="home6-pricing-table pt-10 pb-10">
         <div class="container">
 
@@ -57,7 +56,7 @@
                                 <div class="price-area">
                                     <h2>{{ $item->price }}₺</h2>
                                 </div>
-                               {{-- <div class="feature-list">
+                               --}}{{-- <div class="feature-list">
                                     <ul>
                                         <li>Başlıklı Sms Gönderimi</li>
                                         <li>Anlık Detaylı Raporlama</li>
@@ -74,7 +73,7 @@
                                     <a href="{{ route('contactus') }}" class="home5-primary-btn" style="width:170px">Bilgi Al
                                         <span><i class="fas fa-long-arrow-alt-right"></i></span>
                                     </a>
-                                </div>--}}
+                                </div>--}}{{--
                             </div>
                         </div>
 
@@ -83,7 +82,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 
     <section class="home6-choose-us mt-40 mb-20">
         <div class="container">

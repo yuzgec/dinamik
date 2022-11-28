@@ -37,12 +37,12 @@
                                     <label>Email</label>
                                     <span>{{ config('settings.email1') }}</span>
                                 </div>
-                                <a href="tel:1234563257"></a>
+                                <a href="mailto:config('settings.email1')"></a>
                             </div>
                             <div class="bixol-header-item">
-                                        <span class="bixol-icon-wrapper">
-                                            <i class="flaticon flaticon-pin"></i>
-                                        </span>
+                                <span class="bixol-icon-wrapper">
+                                    <i class="flaticon flaticon-pin"></i>
+                                </span>
                                 <div class="bixol-item-content">
                                     <label>{{ config('settings.adres1') }}</label>
                                 </div>
@@ -53,8 +53,6 @@
             </div>
         </div>
     </div>
-
-
 
     <div class="bixol-navigation mt-3">
         <div class="container">
@@ -96,9 +94,12 @@
                         </li>
                         @endforeach
                         <li><a href="{{ route('api') }}">APİ</a></li>
+{{--
                         <li><a href="{{ route('price') }}">Fiyatlar</a></li>
+--}}
                         <li><a href="{{ route('contactus') }}">İletişim</a></li>
-                        <li><a href="{{ route('home') }}">Giriş Yap</a></li>
+                        <li><a href="{{ route('home') }}">Bireysel</a></li>
+                        <li><a href="{{ route('home') }}">Kurumsal</a></li>
                     </ul>
                 </nav>
             </div>
