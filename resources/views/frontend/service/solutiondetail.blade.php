@@ -49,7 +49,7 @@
                             <h3>{{ $Detay->title }}</h3>
                         </div>
                         <div class="pera-text mt-20">
-                            {!! $item->desc !!}
+                            {!! $Detay->desc !!}
                         </div>
 
                     </div>
