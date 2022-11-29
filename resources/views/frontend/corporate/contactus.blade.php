@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6  mt-3">
+                <div class="col-lg-6  mt-3" id="form">
                     <div class="contact-v2-right">
                         <p>Formu doldurarak bizlere hızlı bir şekilde email gönderebilirsiniz. Uzman ekibimiz en kısa zamanda sizlere dönüş yapacaktır.</p>
                         <form action="{{ route('form') }}" method="POST">
@@ -73,9 +73,7 @@
                                             <div class="invalid-feedback" style="display: block">{{$errors->first('name')}}</div>
                                         @endif
                                         <label for="your-name">Adınız Soyadınız</label>
-                                        <input type="text" name="name">
-
-
+                                        <input type="text" name="name" value="{{ old('name') }}">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -84,8 +82,7 @@
                                             <div class="invalid-feedback" style="display: block">{{$errors->first('email')}}</div>
                                         @endif
                                         <label for="email-address">Email Adresiniz</label>
-                                        <input type="email" name="email">
-
+                                        <input type="email" name="email" value="{{ old('email') }}">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -94,14 +91,13 @@
                                             <div class="invalid-feedback" style="display: block">{{$errors->first('phone')}}</div>
                                         @endif
                                         <label for="phone-number">Telefon Numaranız</label>
-                                        <input type="tel" name="phone" >
-
+                                        <input type="tel" name="phone" value="{{ old('phone') }}">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="phone-field">
                                         <label for="phone-number">Konu</label>
-                                        <input type="text" name="subject">
+                                        <input type="text" name="subject"  value="{{ old('subject') }}">
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
@@ -110,8 +106,7 @@
                                             <div class="invalid-feedback" style="display: block">{{$errors->first('message')}}</div>
                                         @endif
                                         <label for="message">Mesajınız</label>
-                                        <textarea  rows="9" name="message"></textarea>
-
+                                        <textarea  rows="9" name="message">{{ old('message') }}</textarea>
                                     </div>
                                 </div>
                             </div>

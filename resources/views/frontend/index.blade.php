@@ -516,20 +516,7 @@
                     editorheight:"500,500,500,540",
                     responsiveLevels:"1240,1024,778,480",
                     progressBar:{disableProgressBar:true},
-                    navigation: {
-                        onHoverStop:false,
-                        arrows: {
-                            enable:true,
-                            style:"custom",
-                            hide_onleave:true,
-                            left: {
-                                h_offset:30
-                            },
-                            right: {
-                                h_offset:30
-                            }
-                        }
-                    },
+
                     parallax: {
                         levels:[5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,30],
                         type:"scroll",

@@ -28,4 +28,9 @@ class ContactRequest extends FormRequest
             'message.required'          => 'Mesaj alanı zorunludur.',
         ];
     }
+
+    protected function getRedirectUrl()
+    {
+        return parent::getRedirectUrl() .'#form';
+    }
 }
