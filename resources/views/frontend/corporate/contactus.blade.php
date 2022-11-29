@@ -1,6 +1,6 @@
 @extends('frontend.layout.app')
 @section('content')
-
+    @include('sweetalert::alert')
     <div class="bixol-breadcrumb" data-background="/frontend/images/banner.jpg">
         <div class="container">
             <div class="breadcrumb-content">
@@ -64,36 +64,54 @@
                 <div class="col-lg-6  mt-3">
                     <div class="contact-v2-right">
                         <p>Formu doldurarak bizlere hızlı bir şekilde email gönderebilirsiniz. Uzman ekibimiz en kısa zamanda sizlere dönüş yapacaktır.</p>
-                        <form action="#">
+                        <form action="{{ route('form') }}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="name-field">
+                                        @if($errors->has('name'))
+                                            <div class="invalid-feedback" style="display: block">{{$errors->first('name')}}</div>
+                                        @endif
                                         <label for="your-name">Adınız Soyadınız</label>
-                                        <input type="text" name="adsoyad">
+                                        <input type="text" name="name">
+
+
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mail-field">
+                                        @if($errors->has('email'))
+                                            <div class="invalid-feedback" style="display: block">{{$errors->first('email')}}</div>
+                                        @endif
                                         <label for="email-address">Email Adresiniz</label>
                                         <input type="email" name="email">
+
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="phone-field">
+                                        @if($errors->has('phone'))
+                                            <div class="invalid-feedback" style="display: block">{{$errors->first('phone')}}</div>
+                                        @endif
                                         <label for="phone-number">Telefon Numaranız</label>
-                                        <input type="tel" name="telefon" >
+                                        <input type="tel" name="phone" >
+
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="phone-field">
                                         <label for="phone-number">Konu</label>
-                                        <input type="text" >
+                                        <input type="text" name="subject">
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="message-field">
+                                        @if($errors->has('message'))
+                                            <div class="invalid-feedback" style="display: block">{{$errors->first('message')}}</div>
+                                        @endif
                                         <label for="message">Mesajınız</label>
-                                        <textarea  rows="9"></textarea>
+                                        <textarea  rows="9" name="message"></textarea>
+
                                     </div>
                                 </div>
                             </div>

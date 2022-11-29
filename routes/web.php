@@ -19,6 +19,7 @@ Route::get('/haber/{url}', [HomeController::class, 'newsdetail'])->name('newsdet
 Route::get('/bankahesapbilgileri', [HomeController::class, 'bankinfo'])->name('bankinfo');
 Route::get('/sss', [HomeController::class, 'sss'])->name('sss');
 Route::get('/api', [HomeController::class, 'api'])->name('api');
+Route::post('/form', [HomeController::class, 'form'])->name('form');
 
 Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function() {
     Route::get('/', 'DashboardController@index')->name('go');

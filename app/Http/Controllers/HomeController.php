@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Models\Faq;
+use App\Models\Form;
 use App\Models\Page;
 use App\Models\Price;
 use App\Models\Reference;
 use App\Models\Service;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -126,6 +129,22 @@ class HomeController extends Controller
 
     }
 
+    public function form(ContactRequest $request){
 
+        $New = new Form;
+        $New->name  = $request->name;
+        $New->phone  = $request->phone;
+        $New->email  = $request->email;
+        $New->subject  = $request->subject;
+        $New->message  = $request->message;
+        $New->save();
 
+        Mail::send("mail.form",compact('New'),function ($message) use($New) {
+            $message->to('olcayy@gmail.com')->subject($New->name.' Site İletişim Formu');
+        });
+
+        alert()->success('Başarıyla Gönderildi','En kısa zamanda sizlere geri dönüş yapılacaktır.');
+        return redirect()->route('contactus');
+
+    }
 }
