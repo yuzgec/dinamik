@@ -140,7 +140,7 @@ class HomeController extends Controller
         $New->save();
 
         Mail::send("mail.form",compact('New'),function ($message) use($New) {
-            $message->to('info@dinamiksms.com.tr')->subject($New->name.' Site İletişim Formu');
+            $message->to(config('settings.email1'))->subject($New->name.' Site İletişim Formu');
         });
 
         alert()->success('Başarıyla Gönderildi','En kısa zamanda sizlere geri dönüş yapılacaktır.');

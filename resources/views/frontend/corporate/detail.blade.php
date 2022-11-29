@@ -68,8 +68,6 @@
                         <div class="pera-text mt-20">
                             {!! $Detay->desc !!}
                         </div>
-
-
                     </div>
                 </div>
             </div>
