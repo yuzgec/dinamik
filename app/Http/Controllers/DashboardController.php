@@ -27,7 +27,7 @@ class DashboardController extends Controller
         return view('backend.index', compact('Search'));
     }
 
-    public function form(){
+    public function formlar(){
         $All = Form::orderBy('created_at','desc')->get();
         return view('backend.form.index', compact('All'));
     }

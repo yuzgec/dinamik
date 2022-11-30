@@ -24,7 +24,7 @@ Route::post('/form', [HomeController::class, 'form'])->name('form');
 Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function() {
     Route::get('/', 'DashboardController@index')->name('go');
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-    Route::get('/formlar', 'DashboardController@form')->name('form');
+    Route::get('/formlar', 'DashboardController@formlar')->name('formlar');
     Route::delete('/formDelete/{id}', 'DashboardController@formDelete')->name('formDelete');
     Route::auto('/page', PageController::class);
     Route::auto('/page-categories', PageCategoryController::class);
