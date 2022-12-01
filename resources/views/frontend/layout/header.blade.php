@@ -113,6 +113,7 @@
                     </div>
                     <div class="col-3">
                         <div class="bixol-mobile-hamburger">
+                            Menu
                             <span></span>
                             <span></span>
                             <span></span>
