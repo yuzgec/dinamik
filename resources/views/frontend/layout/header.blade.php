@@ -16,7 +16,7 @@
                                 </div>
                                 <a href="tel:{{ config('settings.telefon1') }}"></a>
                             </div>
-                            <div class="bixol-header-item">
+                          {{--  <div class="bixol-header-item">
                                         <span class="bixol-icon-wrapper">
                                             <i class="flaticon flaticonv2-phone-call"></i>
                                         </span>
@@ -24,7 +24,7 @@
                                     <label>Whatsapp:</label>
                                     <span>{{ config('settings.whatsapp') }}</span>
                                 </div>
-                            </div>
+                            </div>--}}
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -160,8 +160,7 @@
                 </ul>
             </li>
         @endforeach
-        <li><a href="{{ route('api') }}">APİ</a></li>
-        <li><a href="{{ route('price') }}">Fiyatlar</a></li>
+        <li><a href="{{ route('solutiondetail', 'api-cozumleri') }}">APİ</a></li>
         <li><a href="{{ route('contactus') }}">İletişim</a></li>
         <li><a href="http://panel.dinamiksms.com.tr/" target="_blank">Giriş Yap</a></li>
     </ul>
