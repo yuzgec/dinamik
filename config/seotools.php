@@ -20,8 +20,9 @@ return [
         /*
          * Webmaster tags are always added.
          */
+
         'webmaster_tags' => [
-            'google'    => null,
+            'google'    => "zdatcS1iZvE1fLMQBap6XeOG3TEBANEJXrD_ZQSzHG8",
             'bing'      => null,
             'alexa'     => null,
             'pinterest' => null,

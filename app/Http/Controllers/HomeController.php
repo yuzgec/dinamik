@@ -10,7 +10,6 @@ use App\Models\Price;
 use App\Models\Reference;
 use App\Models\Service;
 use Artesaos\SEOTools\Facades\SEOMeta;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
@@ -38,7 +37,7 @@ class HomeController extends Controller
 
     public function contactus(){
 
-        SEOMeta::setTitle('İletişim | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setTitle('İletişim | Mesaj Ücretleri | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setCanonical(url()->full());
 
@@ -47,7 +46,7 @@ class HomeController extends Controller
 
     public function price(){
 
-        SEOMeta::setTitle('Sms Fiyat Listesi | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setTitle('Sms Fiyat Listesi | Mesaj Fiyatları  | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setCanonical(url()->full());
         $Price = Price::all();
@@ -57,7 +56,7 @@ class HomeController extends Controller
 
     public function support(){
 
-        SEOMeta::setTitle('Online Destek | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setTitle('Online Destek | SMS Yardım Servisi | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setCanonical(url()->full());
         return view('frontend.corporate.support');
@@ -72,7 +71,7 @@ class HomeController extends Controller
     }
 
     public function api(){
-        SEOMeta::setTitle('Api | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setTitle('SMS Api | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setCanonical(url()->full());
         return view('frontend.service.api');
@@ -90,7 +89,7 @@ class HomeController extends Controller
     public function servicedetail($url){
         $Detay = Service::where('slug', '=', $url)->firstOrFail();
 
-        SEOMeta::setTitle($Detay->title.' | Online Destek | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
+        SEOMeta::setTitle($Detay->title.' | Mesaj Ücretleri | Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setDescription('Dinamik SMS | Toplu SMS Fiyatları | Başlık Kısa Mesaj');
         SEOMeta::setCanonical(url()->full());
         return view('frontend.service.servicedetail', compact('Detay'));
