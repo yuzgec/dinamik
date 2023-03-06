@@ -33,28 +33,29 @@
                     <div class="col-9">
                         <textarea label="Açıklama" name="desc" id="aciklama">
 
-                        <p>Telekomünikasyon sektöründe Şirketimiz olan Dinamik Telekomunikasyon Bilgi Teknolojileri İletişim Kurulu Başkanligi’ndan STH kapsaminda yetkilendirilmiştir.
-                        Muşteri memnuniyetini ilke edilen firmamiz, son kullanicilar izin uyguladigi en düşük maliyet maksimum kazanç ve en kaliteli
-                            hizmet politikasi ile satu odakli degil, satış sonrasi destegi amaç edinmiştir.
-                        Konuyla ilgili olarak; Toplu SMS gonderimlerinizde, isteginiz dahilinde muşteriIerinizi bilgilendirmeye yonelik mesajlarinizin
-                            zamaninda gonderebilecegini ve anlik gonderim raporlarini online alabileceginizi taahhut ederiz.
+                        <p>Telekomünikasyon sektöründe Şirketimiz olan Dinamik Telekomunikasyon Bilgi Teknolojileri İletişim Kurulu Başkanligi’ndan STH
+                            kapsaminda yetkilendirilmiştir.
+                        Müşteri memnuniyetini ilke edinen firmamiz, son kullanıcılar izin uyguladığı en düşük maliyet maksimum kazanç ve en kaliteli
+                            hizmet politikasi ile satış odakli değil, satış sonrasi destegi amaç edinmiştir.
+                        Konuyla ilgili olarak; Toplu SMS gönderimlerinizde, isteginiz dahilinde muşteriIerinizi bilgilendirmeye yönelik mesajlarınızın
+                            zamanında gönderebileceğini ve anlık gönderim raporlarını online alabileceginizi taahhut ederiz.
                         Programla ilgili gerekli bilgiler ve SMS fiyatlari aşagida belirtilmiştir.</p>
 
 
-                         <p>Bilgilendirme ya da reklama yönelik tüm mesajlarinizi, ayni anda GSM operatoru gözetmeksizin binlerce kişiye gönderebilirsiniz, gönderim raporlarini ulaşan-beklemede olan-iptal olan detayinda ve online olarak takip edebilirsiniz.
-                        Gonderici isminiz mesaj metninin başında sistem tarafindan otomatik olarak atanacaktir, sadece ulaşan mesajlar ücretlendirilecektir,
-                            tüm GSM operatorlerine gonderim için aynı fiyatlar geçerlidir.</p>
+                         <p>Bilgilendirme ya da reklama yönelik tüm mesajlarinizi, ayni anda GSM operatöru gözetmeksizin binlerce kişiye gönderebilirsiniz,
+                            gönderim raporlarini ulaşan-beklemede olan-iptal olan detayında ve online olarak takip edebilirsiniz.
+                        Gönderici isminiz mesaj metninin başında sistem tarafindan otomatik olarak atanacaktir, sadece ulaşan mesajlar ücretlendirilecektir,
+                            tüm GSM operatorlerine gönderim için aynı fiyatlar geçerlidir.</p>
 
 
-
-                        <b>Toplu SMS birim fiyatimiz</b>:
+                        <b>Toplu SMS birim fiyatımız</b>:
                         <br>1.000.000 SMS 0,00165 TL 16.S00 TL
                         <br>5.000.000 SMS 0,0155 TL 77.500 TL
                         <br>10.000.000 SMS 0,0150 TL 150.000 TL
                         <br>20.000.000 SMS 0,0145 TL 290.000 TL
                         <br>50.000.000 SMS 0,0140 TL 700.000 TL
-                        <br>( Fiyatlarimiza %10 OIV , %18 KDV dahildir)
-                        <br>Not: Teklifimiz 30 gun sure izin geçerlidir. Yetkili
+                        <br>( Fiyatlarımıza %10 OIV , %18 KDV dahildir.)
+                        <br>Not: Teklifimiz 30 gün sure izin geçerlidir.
 
                         <br><br>
 
