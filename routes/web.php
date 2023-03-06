@@ -23,6 +23,13 @@ Route::post('/form', [HomeController::class, 'form'])->name('form');
 
 Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function() {
     Route::get('/', 'DashboardController@index')->name('go');
+
+    Route::get('/teklifler', 'DashboardController@teklifler')->name('teklifler');
+    Route::get('/teklif-olustur', 'DashboardController@teklifolustur')->name('teklifolustur');
+    Route::post('/teklifkaydet', 'DashboardController@teklifkaydet')->name('teklifkaydet');
+    Route::get('/teklifduzenle/{id}', 'DashboardController@teklifduzenle')->name('teklif.edit');
+    Route::put('/teklifduzenle/{id}', 'DashboardController@teklifduzenlepost')->name('teklif.update');
+
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('/formlar', 'DashboardController@formlar')->name('formlar');
     Route::delete('/formDelete/{id}', 'DashboardController@formDelete')->name('formDelete');
@@ -44,6 +51,7 @@ Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function(
     Route::auto('/features', FeaturesController::class);
     Route::auto('/reference', ReferenceController::class);
     Route::auto('/price', PriceController::class);
+
 });
 
 require __DIR__.'/auth.php';
