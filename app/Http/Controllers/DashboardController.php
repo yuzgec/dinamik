@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\OfferRequest;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Author;
 use App\Models\Form;
@@ -52,7 +53,7 @@ class DashboardController extends Controller
     }
 
 
-    public function teklifkaydet(Request $request){
+    public function teklifkaydet(OfferRequest $request){
 
         $data = $request->all();
         $New = new Offer;
@@ -86,7 +87,7 @@ class DashboardController extends Controller
     }
 
 
-    public function teklifduzenlepost(Request $request,$id){
+    public function teklifduzenlepost(OfferRequest $request,$id){
 
         $Update = Offer::where('id',$id)->first();
 
