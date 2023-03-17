@@ -139,7 +139,7 @@ class DashboardController extends Controller
             Mail::send('mail.form', compact('Email'), function ($message) use ($Email) {
                 $message->to($Email->company_email)
                     ->subject('Syn. ' . $Email->company_officer . ' ' . 'Dinamik SMS Fiyat Teklifi')
-                    ->attach(url($Email->file));
+                    ->attach(public_path($Email->file));
             });
 
             $Update = Offer::where('id',$id)->update(['send_email' => 1]);
