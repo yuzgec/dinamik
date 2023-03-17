@@ -115,7 +115,10 @@ class DashboardController extends Controller
         $pdf = Pdf::loadView('backend.offer.pdf', ['Detail' => $Detail])
             ->setOption(['dpi' => 96, 'defaultFont' => 'DejaVu Sans', 'encoding' => 'utf8', 'isFontSubsettingEnabled' => true])
             ->setPaper('a4', 'portrait')
-            ->save('offer/'.$Update->id.'.pdf');
+            ->save('offer/'.$request->company_name.' - '.$Detail->id.' Fiyat Teklifi.pdf');
+
+        $Files = Offer::where('id', $Update->id)->update(['file' => 'offer/'.$request->company_name.' - '.$Detail->id.' Fiyat Teklifi.pdf']);
+
 
         $SendMail = Offer::where('id',$id)->update(['send_email' => 0]);
 
