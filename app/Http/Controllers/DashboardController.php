@@ -52,9 +52,9 @@ class DashboardController extends Controller
                 ->orWhere('company_officer', 'like', '%'. request('q'). '%')
                 ->orWhere('company_phone', 'like', '%'. request('q'). '%')
                 ->orWhere('company_email', 'like', '%'. request('q'). '%')
-                ->paginate(1);
+                ->paginate(30);
         }else{
-            $All = Offer::all();
+            $All = Offer::paginate(30);;
         }
 
         return view('backend.offer.index', compact('All'));
@@ -82,8 +82,9 @@ class DashboardController extends Controller
         $pdf = Pdf::loadView('backend.offer.pdf', ['Detail' => $Detail])
             ->setOption(['dpi' => 96, 'defaultFont' => 'DejaVu Sans', 'encoding' => 'utf8', 'isFontSubsettingEnabled' => true])
             ->setPaper('a4', 'portrait')
-            ->save('offer/'.$New->id.'.pdf');
+            ->save('offer/'.$request->company_name.' - '.$Detail->id.' Fiyat Teklifi.pdf');
 
+        $Files = Offer::where('id', $New->id)->update(['file' => 'offer/'.$request->company_name.' - '.$Detail->id.' Fiyat Teklifi.pdf']);
 
         alert()->success('Başarıyla Oluşturuldu','Teklif Başarıyla Oluşturuldu');
         return redirect()->route('teklifler');
@@ -97,7 +98,6 @@ class DashboardController extends Controller
         $Edit = Offer::where('id',$id)->first();
         return view('backend.offer.edit', compact('Edit'));
     }
-
 
     public function teklifduzenlepost(OfferRequest $request,$id){
 
@@ -117,9 +117,9 @@ class DashboardController extends Controller
             ->setPaper('a4', 'portrait')
             ->save('offer/'.$Update->id.'.pdf');
 
-        dd($pdf);
+        $SendMail = Offer::where('id',$id)->update(['send_email' => 0]);
 
-        alert()->success('Başarıyla Oluşturuldu','Teklif Başarıyla Oluşturuldu');
+        alert()->success('Başarıyla Güncellendi','Teklif Başarıyla Güncellendi');
         return redirect()->route('teklifler');
 
         //return $pdf->download($Detail->company_name.' Fiyat Teklifi.pdf')->header('Content-Type','application/pdf');;
@@ -142,7 +142,6 @@ class DashboardController extends Controller
             $Update = Offer::where('id',$id)->update(['send_email' => 1]);
 
         });
-
 
         alert()->success('Teklif Gönderildi','Teklif Başarıyla Gönderildi');
         return redirect()->route('teklifler');
