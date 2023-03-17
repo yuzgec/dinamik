@@ -52,7 +52,7 @@
                     @foreach($All as $item)
                         <tr>
                             <td>
-                                <a href="{{ url('offer/'.$item->id.'.pdf') }}" target="_blank">Önizle</a>
+                                <a href="{{ url($item->file) }}" target="_blank">Önizle</a>
                             </td>
                             <td>
                                 {{ $item->company_name }}
