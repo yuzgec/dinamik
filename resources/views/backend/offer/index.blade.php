@@ -7,7 +7,7 @@
                 <div>
                     <h4 class="card-title">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                        Teklif Listesi
+                        Teklif Listesi [{{ $All->total() }}]
                     </h4>
                 </div>
                 <div class="d-flex justify-content-between">
@@ -24,6 +24,17 @@
 
 
             <div class="table-responsive p-2">
+                <div class="mb-3">
+                    <form action="" method="GET">
+                        <div class="input-icon mb-3">
+                            <input type="text" name="q" value="{{ old('q') }}" class="form-control" placeholder="Arama…">
+                            <span class="input-icon-addon">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg>
+                            </span>
+                        </div>
+                    </form>
+
+                </div>
                 <table class="table table-hover table-striped table-bordered table-center">
                     <thead>
                     <tr>
@@ -62,30 +73,12 @@
                             </td>
 
                             <td class="d-flex">
-                                <button class="btn btn-sm btn-success" style="margin-right:5px">SMS</button>
-                                <button class="btn btn-sm btn-danger btn-secondary">E-MAİL</button>
+                                <button class="btn btn-sm btn-secondary" style="margin-right:5px" disabled>SMS</button>
+                                <a class="btn btn-sm btn-{{ ($item->send_email == 0) ? 'secondary' : 'success' }}"
+                                   href="{{ route('emailGonder', $item->id) }}">E-MAİL</a>
                             </td>
-
-
-
                             <td>
-                                <div class="btn-list flex-nowrap">
-                                    <div class="dropdown">
-                                        <button class="btn dropdown-toggle align-text-top btn-sm" data-bs-boundary="viewport" data-bs-toggle="dropdown">
-                                            Eylemler
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <a class="dropdown-item justify-content-between" href="{{ route('teklif.edit', $item->id) }}" title="Düzenle">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 15l8.385 -8.415a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3z" /><path d="M16 5l3 3" /><path d="M9 7.07a7.002 7.002 0 0 0 1 13.93a7.002 7.002 0 0 0 6.929 -5.999" /></svg>
-                                                Düzenle
-                                            </a>
-                                            <a data-bs-toggle="modal" data-bs-target="#silmeonayi{{ $item->id }}" class="dropdown-item justify-content-between">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="4" y1="7" x2="20" y2="7" /><line x1="10" y1="11" x2="10" y2="17" /><line x1="14" y1="11" x2="14" y2="17" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
-                                                Sil
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a href="{{ route('teklif.edit', $item->id) }}">Düzenle</a>
                             </td>
                         </tr>
                         <div class="modal modal-blur fade" id="silmeonayi{{ $item->id }}" tabindex="-1" role="dialog" aria-hidden="true">
@@ -118,9 +111,10 @@
                     @endforeach
                     </tbody>
                 </table>
+
+                <div class="col-12 col-md-12 mt-3">{{ $All->appends(['siralama' => 'teklif', 'q' => request('q')])->links() }}</div>
             </div>
 
         </div>
     </div>
-
 @endsection

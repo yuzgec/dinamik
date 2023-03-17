@@ -18,6 +18,8 @@ use App\Models\Team;
 use App\Models\Project;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Mail;
 
 class DashboardController extends Controller
 {
@@ -44,7 +46,17 @@ class DashboardController extends Controller
 
 
     public function teklifler(){
-        $All = Offer::all();
+
+        if (request()->filled('q')){
+            $All = Offer::where('company_name', 'like', '%'. request('q'). '%')
+                ->orWhere('company_officer', 'like', '%'. request('q'). '%')
+                ->orWhere('company_phone', 'like', '%'. request('q'). '%')
+                ->orWhere('company_email', 'like', '%'. request('q'). '%')
+                ->paginate(1);
+        }else{
+            $All = Offer::all();
+        }
+
         return view('backend.offer.index', compact('All'));
     }
 
@@ -105,6 +117,8 @@ class DashboardController extends Controller
             ->setPaper('a4', 'portrait')
             ->save('offer/'.$Update->id.'.pdf');
 
+        dd($pdf);
+
         alert()->success('Başarıyla Oluşturuldu','Teklif Başarıyla Oluşturuldu');
         return redirect()->route('teklifler');
 
@@ -112,13 +126,33 @@ class DashboardController extends Controller
 
     }
 
+    public function emailGonder($id){
+
+
+        DB::transaction(function($id){
+
+            $Email = Offer::where('id', $id)->first();
+
+            Mail::send('mail.form', compact('Email'), function ($message) use ($Email) {
+                $message->to($Email->company_email)
+                    ->subject('Syn. ' . $Email->company_officer . ' ' . 'Dinamik SMS Fiyat Teklifi')
+                    ->attach(url('offer/' . $Email->id . '.pdf'));
+            });
+
+            $Update = Offer::where('id',$id)->update(['send_email' => 1]);
+
+        });
+
+
+        alert()->success('Teklif Gönderildi','Teklif Başarıyla Gönderildi');
+        return redirect()->route('teklifler');
+    }
 
     public function smsGonder(){
 
-    }
 
-    public function emailGonder(){
 
     }
+
 
 }

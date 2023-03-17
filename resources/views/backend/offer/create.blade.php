@@ -33,29 +33,29 @@
                     <div class="col-9">
                         <textarea label="Açıklama" name="desc" id="aciklama">
 
-                        <p>Telekomünikasyon sektöründe Şirketimiz olan Dinamik Telekomunikasyon Bilgi Teknolojileri İletişim Kurulu Başkanligi’ndan STH
+                        <p>Telekomünikasyon sektöründe şirketimiz olan Dinamik Telekomunikasyon Bilgi Teknolojileri İletişim Kurulu Başkanligi’ndan STH
                             kapsaminda yetkilendirilmiştir.
                         Müşteri memnuniyetini ilke edinen firmamiz, son kullanıcılar izin uyguladığı en düşük maliyet maksimum kazanç ve en kaliteli
                             hizmet politikasi ile satış odakli değil, satış sonrasi destegi amaç edinmiştir.
-                        Konuyla ilgili olarak; Toplu SMS gönderimlerinizde, isteginiz dahilinde muşteriIerinizi bilgilendirmeye yönelik mesajlarınızın
-                            zamanında gönderebileceğini ve anlık gönderim raporlarını online alabileceginizi taahhut ederiz.
+                        Konuyla ilgili olarak; Toplu SMS gönderimlerinizde, isteginiz dahilinde müşterilerinizi bilgilendirmeye yönelik mesajlarınızın
+                            zamanında gönderebileceğini ve anlık gönderim raporlarını online alabileceğinizi taahhüt ederiz.
                         Programla ilgili gerekli bilgiler ve SMS fiyatlari aşagida belirtilmiştir.</p>
 
 
                          <p>Bilgilendirme ya da reklama yönelik tüm mesajlarinizi, ayni anda GSM operatöru gözetmeksizin binlerce kişiye gönderebilirsiniz,
-                            gönderim raporlarini ulaşan-beklemede olan-iptal olan detayında ve online olarak takip edebilirsiniz.
-                        Gönderici isminiz mesaj metninin başında sistem tarafindan otomatik olarak atanacaktir, sadece ulaşan mesajlar ücretlendirilecektir,
+                            gönderim raporlarini ulaşan-beklemede olan-iptal olan detayında ve online olarak takip edebilirsiniz.</p>
+                        <p>Gönderici isminiz mesaj metninin başında sistem tarafindan otomatik olarak atanacaktir, sadece ulaşan mesajlar ücretlendirilecektir,
                             tüm GSM operatorlerine gönderim için aynı fiyatlar geçerlidir.</p>
 
 
                         <b>Toplu SMS birim fiyatımız</b>:
-                        <br>1.000.000 SMS 0,00165 TL 16.S00 TL
+                        <br>1.000.000 SMS 0,00165 TL 16.500 TL
                         <br>5.000.000 SMS 0,0155 TL 77.500 TL
                         <br>10.000.000 SMS 0,0150 TL 150.000 TL
                         <br>20.000.000 SMS 0,0145 TL 290.000 TL
                         <br>50.000.000 SMS 0,0140 TL 700.000 TL
-                        <br>( Fiyatlarımıza %10 OIV , %18 KDV dahildir.)
-                        <br>Not: Teklifimiz 30 gün sure izin geçerlidir.
+                        <br>( Fiyatlarımıza %10 OİV , %18 KDV dahildir.)
+                        <br><strong>Not: Teklifimiz 30 gün süre izin geçerlidir.</strong>
 
                         <br><br>
 
@@ -63,8 +63,8 @@
                         Tel : 0216 822 01 11<br>
                         Mobil : 05332847596<br>
                         E-Posta : oktaygiyer@dinamiksms.com.tr<br>
-                        Dinamik Telekomunikasyon Bili§im Sistemleri San.Tic.Ltd.Şti.<br>
-                        Adres : Ornek Mah. Adnan Menderes Cad. No:4/6A Ataşehir/Istanbul<br>
+                        Dinamik Telekomunikasyon Bilişim Sistemleri San.Tic.Ltd.Şti.<br>
+                        Adres : Örnek Mah. Adnan Menderes Cad. No:4/6A Ataşehir/İstanbul<br>
                         </textarea >
                     </div>
                 </div>

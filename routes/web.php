@@ -30,6 +30,9 @@ Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function(
     Route::get('/teklifduzenle/{id}', 'DashboardController@teklifduzenle')->name('teklif.edit');
     Route::put('/teklifduzenle/{id}', 'DashboardController@teklifduzenlepost')->name('teklif.update');
 
+    Route::get('/email/{id}', 'DashboardController@emailGonder')->name('emailGonder');
+
+
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('/formlar', 'DashboardController@formlar')->name('formlar');
     Route::delete('/formDelete/{id}', 'DashboardController@formDelete')->name('formDelete');
