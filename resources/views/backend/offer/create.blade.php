@@ -47,9 +47,11 @@
                         <p>Gönderici isminiz mesaj metninin başında sistem tarafindan otomatik olarak atanacaktir, sadece ulaşan mesajlar ücretlendirilecektir,
                             tüm GSM operatorlerine gönderim için aynı fiyatlar geçerlidir.</p>
 
-
                         <b>Toplu SMS birim fiyatımız</b>:
-                        <br>1.000.000 SMS 0,00165 TL 16.500 TL
+                        <br>100.000 SMS 0,020 TL 2.000 TL
+                        <br>250.000 SMS 0,019 TL 4.750 TL
+                        <br>500.000 SMS 0,018 TL 9.000 TL
+                        <br>1.000.000 SMS 0,0165 TL 16.500 TL
                         <br>5.000.000 SMS 0,0155 TL 77.500 TL
                         <br>10.000.000 SMS 0,0150 TL 150.000 TL
                         <br>20.000.000 SMS 0,0145 TL 290.000 TL

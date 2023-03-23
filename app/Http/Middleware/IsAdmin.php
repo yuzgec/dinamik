@@ -17,4 +17,3 @@ class IsAdmin
         return redirect('/')->with('error','Bu Alana Giriş Yapma Yetkiniz Yok');
     }
 }
-
