@@ -55,7 +55,7 @@
                     @foreach($All as $item)
                         <tr>
                             <td>
-                                <a href="{{ url($item->file) }}" target="_blank">Önizle</a>
+                                <a href="{{ url($item->file) }}?ver={{ rand(1,9) }}" target="_blank">Önizle</a>
                             </td>
                             <td>
                                 {{ $item->company_name }}

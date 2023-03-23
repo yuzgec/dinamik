@@ -32,7 +32,6 @@
                     </div>
                     <div class="col-9">
                         <textarea label="Açıklama" name="desc" id="aciklama">
-
                         <p>Telekomünikasyon sektöründe şirketimiz olan Dinamik Telekomunikasyon Bilgi Teknolojileri İletişim Kurulu Başkanligi’ndan STH
                             kapsaminda yetkilendirilmiştir.
                         Müşteri memnuniyetini ilke edinen firmamiz, son kullanıcılar izin uyguladığı en düşük maliyet maksimum kazanç ve en kaliteli
