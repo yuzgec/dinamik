@@ -52,9 +52,10 @@ class DashboardController extends Controller
                 ->orWhere('company_officer', 'like', '%'. request('q'). '%')
                 ->orWhere('company_phone', 'like', '%'. request('q'). '%')
                 ->orWhere('company_email', 'like', '%'. request('q'). '%')
+                ->where('user_id', auth()->user()->id)
                 ->paginate(30);
         }else{
-            $All = Offer::paginate(30);;
+            $All = Offer::where('user_id', auth()->user()->id)->paginate(30);;
         }
 
         return view('backend.offer.index', compact('All'));
@@ -63,7 +64,6 @@ class DashboardController extends Controller
     public function teklifolustur(){
         return view('backend.offer.create');
     }
-
 
     public function teklifkaydet(OfferRequest $request){
 
@@ -130,31 +130,20 @@ class DashboardController extends Controller
     }
 
     public function emailGonder($id){
-
-
         DB::transaction(function() use ($id){
-
             $Email = Offer::where('id', $id)->first();
-
             Mail::send('mail.form', compact('Email'), function ($message) use ($Email) {
                 $message->to($Email->company_email)
                     ->subject('Syn. ' . $Email->company_officer . ' ' . 'Dinamik SMS Fiyat Teklifi')
                     ->attach(public_path($Email->file));
             });
-
             $Update = Offer::where('id',$id)->update(['send_email' => 1]);
-
         });
-
         alert()->success('Teklif Gönderildi','Teklif Başarıyla Gönderildi');
         return redirect()->route('teklifler');
     }
 
     public function smsGonder(){
 
-
-
     }
-
-
 }
