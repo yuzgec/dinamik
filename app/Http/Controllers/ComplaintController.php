@@ -136,10 +136,6 @@ class ComplaintController extends Controller
 
     }
 
-
-
-
-
     public function emailGonder($id){
         DB::transaction(function() use ($id){
             $Email = Offer::where('id', $id)->first();

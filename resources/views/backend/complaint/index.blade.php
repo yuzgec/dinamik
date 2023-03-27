@@ -130,7 +130,7 @@
                                 </span>
 
                             </td>
-
+{{--
                             <td>
                                 <div class="d-flex align-items-center justify-content-center">
                                     <button class="btn btn-sm btn-secondary" style="margin-right:5px" disabled>
@@ -143,13 +143,13 @@
                                        href="{{ route('emailGonder', $item->id) }}"
                                        title="Kullanıcıya ({{ $item->emailCount }}) adet email gönderilmiştir. ">
                                         <x-icon.mail/>
-                                       {{-- @if($item->emailCount > 0)
+                                       --}}{{-- @if($item->emailCount > 0)
                                             ({{ $item->emailCount }})
-                                        @endif--}}
+                                        @endif--}}{{--
                                     </a>
                                 </div>
 
-                            </td>
+                            </td>--}}
                             <td>
                                 <a href="{{ route('sikayet.edit', $item->id) }}"><x-icon.edit/></a>
                             </td>
