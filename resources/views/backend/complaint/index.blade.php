@@ -185,7 +185,7 @@
                     </tbody>
                 </table>
 
-                <div class="col-12 col-md-12 mt-3">{{ $All->appends(['siralama' => 'Şikayet', 'liste' => request('liste'), 'q' => request('q')])->links() }}</div>
+                <div class="col-12 col-md-12 mt-3">{{ $All->appends(['siralama' => 'sikayet', 'liste' => request('liste'), 'q' => request('q')])->links() }}</div>
             </div>
 
         </div>
