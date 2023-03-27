@@ -33,7 +33,6 @@
                 </div>
             </div>
 
-
             <div class="table-responsive p-2">
                 <div class="row">
                     <div class="col-md-10 col-12">

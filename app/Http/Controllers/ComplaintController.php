@@ -48,7 +48,7 @@ class ComplaintController extends Controller
         }elseif(auth()->user()->is_admin == 2){
             $All = Complaint::with('getUser')->where('user_id', auth()->user()->id)
                 ->orderBy('created_at', 'desc')
-                ->paginate((request('liste')  ? request('liste') : 30));
+                ->paginate(30);
             //dd($All);
         }
 
