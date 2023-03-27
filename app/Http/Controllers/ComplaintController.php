@@ -92,7 +92,6 @@ class ComplaintController extends Controller
         alert()->success('Başarıyla Oluşturuldu','Şikayet Başarıyla Oluşturuldu');
         return redirect()->route('sikayet.index');
 
-        //return $pdf->download($Detail->company_name.' Fiyat Teklifi.pdf')->header('Content-Type','application/pdf');;
 
     }
 
@@ -135,9 +134,11 @@ class ComplaintController extends Controller
         alert()->success('Başarıyla Güncellendi','Şikayet Başarıyla Güncellendi');
         return redirect()->route('teklifler');
 
-        //return $pdf->download($Detail->company_name.' Fiyat Teklifi.pdf')->header('Content-Type','application/pdf');;
-
     }
+
+
+
+
 
     public function emailGonder($id){
         DB::transaction(function() use ($id){
