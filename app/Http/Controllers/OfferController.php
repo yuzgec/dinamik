@@ -43,16 +43,16 @@ class OfferController extends Controller
                 ->whereBetween('created_at', ['2023-03-26 00:50:58','2023-03-24 00:50:58'])
                 ->orderBy('created_at', 'desc')
                 ->paginate((request('liste')  ? request('liste') : 30));
-        }elseif(auth()->user()->is_admin == 1){
+        }elseif(auth()->user()->is_admin == 2){
+            $All = Offer::with('getUser')->where('user_id', auth()->user()->id)
+                ->orderBy('created_at', 'desc')
+                ->paginate(30);
+            //dd($All);
+        }else{
             $All = Offer::where('user_id', auth()->user()->id)
                 ->orderBy('created_at', 'desc')
                 ->where('user_id', auth()->user()->id)
                 ->paginate((request('liste')  ? request('liste') : 30));
-        }elseif(auth()->user()->is_admin == 2){
-            $All = Offer::with('getUser')->where('user_id', auth()->user()->id)
-                ->orderBy('created_at', 'desc')
-                ->paginate((request('liste')  ? request('liste') : 30));
-            //dd($All);
         }
 
         return view('backend.offer.index', compact('All'));
@@ -60,9 +60,7 @@ class OfferController extends Controller
 
     public function teklifolustur(){
         $Sablon = OfferTheme::all();
-
         $SablonSelect = OfferTheme::where('id', '=', request('sablon'))->first();
-
         return view('backend.offer.create', compact('Sablon', 'SablonSelect'));
     }
 
