@@ -3,11 +3,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $Detail->company_name }} - Fiyat Teklifi</title>
+    <title>{{ $Detail->firma.' | '.$Detail->baslik }} - Şikayet Yazısı</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <style>
         *{
             font-family:"DeJaVu Sans",monospace;
+            list-style: none !important;
+            font-weight: normal !important;
         }
 
         body {
@@ -16,7 +18,7 @@
         }
 
         p{
-            font-size: 13px;
+            font-size: 14px;
             letter-spacing: .5px;
             line-height: 15px;
         }
@@ -51,16 +53,27 @@
        <div class="text-center">Tarih : {{ \Carbon\Carbon::parse($Detail->created_at)->format('d/m/Y')}}</div>
 
        <div>
-           <div style="margin-top:40px">
-               <h2 class="text-center mt-3 mb-2">SMS FİYAT TEKLİFİ</h2>
+           <div style="margin-top:50px">
+               <h5 class="text-center mt-3">T.C.</h5>
+               <h5 class="text-center">{{ $Detail->kime }}</h5>
+               <h5 class="text-center">{{ $Detail->nereye }}</h5>
 
-               <h5 class="text-capitalize">Firma Adı : {{ $Detail->company_name }}</h5>
-               <h6 class="text-capitalize" style="margin-top: -10px">Syn. {{ $Detail->company_officer }}</h6>
            </div>
 
            <div style="margin-top:20px">
-               {!! mb_convert_encoding($Detail->content, 'HTML-ENTITIES', 'UTF-8') !!}
+               {!! mb_convert_encoding($Detail->text, 'HTML-ENTITIES', 'UTF-8') !!}
            </div>
+            <br><br><br>
+           <ul>
+               <li>Başlık : {{ $Detail->baslik }}</li>
+               <li>Firma : {{ $Detail->firma }}</li>
+               <li>Ad Soyad : {{ $Detail->adsoyad }}</li>
+               <li>VD. : {{ $Detail->vergidaire }}</li>
+               <li>VD N0 : {{ $Detail->vergino }}</li>
+               <li>Telefon : {{ $Detail->telefon }}</li>
+               <li>Email : {{ $Detail->email }}</li>
+           </ul>
+
        </div>
 
        <div class="footer">

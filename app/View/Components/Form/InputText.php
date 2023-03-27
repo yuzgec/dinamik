@@ -9,13 +9,15 @@ class InputText extends Component
     public $name;
     public $class;
     public $column;
+    public $id;
 
-    public function __construct($label, $name, $class = "form-control",$column=3)
+    public function __construct($label, $name, $class = "form-control",$column=3, $id=null)
     {
         $this->label = $label;
         $this->name = $name;
         $this->class = $class;
         $this->column = $column;
+        $this->id = $id;
     }
 
     public function render()

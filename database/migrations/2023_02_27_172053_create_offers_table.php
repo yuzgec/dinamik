@@ -13,6 +13,7 @@ return new class extends Migration
             $table->id();
 
             $table->integer('user_id');
+            $table->string('file')->nullable();
 
             $table->string('company_name')->nullable();
             $table->string('company_officer')->nullable();
@@ -23,6 +24,9 @@ return new class extends Migration
 
             $table->integer('send_email')->default(0);
             $table->integer('send_sms')->default(0);
+
+            $table->integer('emailCount')->default(0);
+            $table->integer('smsCount')->default(0);
 
             $table->timestamps();
             $table->softDeletes();

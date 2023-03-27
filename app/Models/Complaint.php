@@ -5,15 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Offer extends Model
+class Complaint extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
-    protected $table = 'offers';
+    protected $table = 'complaints';
 
     public function getUser(){
         return $this->hasOne('App\Models\User', 'id','user_id');
     }
-
 }

@@ -30,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
         Carbon::setLocale(config('app.locale'));
         config()->set('settings', Setting::pluck('value','item')->all());
         URL::forceScheme('https');
+
         Blade::component('form-inputtext', InputText::class);
         Blade::component('form-select', SelectBox::class);
         Blade::component('form-textarea', TextArea::class);
@@ -40,5 +41,6 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('back', Back::class);
         Blade::component('save', Save::class);
         Blade::component('add', Add::class);
+
     }
 }

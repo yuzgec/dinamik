@@ -1,5 +1,5 @@
 @extends('backend.layout.app')
-@section('title', 'Teklif Listele')
+@section('title', 'Şikayet Listele')
 @section('customCSS')
     <style>
 
@@ -18,7 +18,7 @@
                 <div>
                     <h4 class="card-title">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                        Teklif Listesi [{{ $All->total() }}]
+                        Şikayet Listesi [{{ $All->total() }}]
                     </h4>
                 </div>
                 <div class="d-flex justify-content-between">
@@ -26,9 +26,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 18v-6a3 3 0 0 0 -3 -3h-10l4 -4m0 8l-4 -4" /></svg>
                         Geri
                     </a>
-                    <a class="btn btn-primary btn-sm me-1" href="{{ route('teklifolustur') }}" title="Teklif Ekle">
+                    <a class="btn btn-primary btn-sm me-1" href="{{ route('sikayet.create') }}" title="Şikayet Ekle">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                        Teklif Oluştur
+                        Şikayet Oluştur
                     </a>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                                     </span>
                                 </div>
                                 @if(request('q'))
-                                <a href="{{ route('teklifler') }}" class="btn btn-primary btn-sm">Sıfırla </a>
+                                <a href="{{ route('sikayet.index') }}" class="btn btn-primary btn-sm">Sıfırla </a>
                                 @endif
                             </form>
                         </div>
@@ -70,17 +70,18 @@
                             <option value="{{ url()->current() }}?filtre=dun" {{ (request('dun')) ? 'selected' : null }}">Dün</option>
                             <option value="{{ url()->current() }}?filtre=hafta" {{ (request('hafta') == 25) ? 'selected' : null }}">Haftalık</option>
                             <option value="{{ url()->current() }}?filtre=ay" {{ (request('ay') == 50) ? 'selected' : null }}">Aylık</option>
-                            <option value="{{ route('teklifler') }}">Hepsi</option>
+                            <option value="{{ route('Şikayetler') }}">Hepsi</option>
                         </select>
                     </div>--}}
                 <table class="table table-hover table-striped table-bordered table-center">
                     <thead>
                     <tr>
                         <th>PDF</th>
-                        <th>Firma Adı</th>
-                        <th>Firma Yetkili</th>
-                        <th>Firma Telefon</th>
-                        <th>Firma Email</th>
+                        <th>Firma</th>
+                        <th>Başlık</th>
+                        <th>Kime</th>
+                        <th>Nereye</th>
+
                         @if(auth()->user()->is_admin == 2)
                         <th>Temsilci</th>
                         @endif
@@ -102,17 +103,21 @@
                                 </a>
                             </td>
                             <td>
-                                <span class="text-capitalize">{{ $item->company_name }}</span>
+                                <span class="text-capitalize">{{ $item->sikayet_numarasi }}</span>
                             </td>
                             <td>
-                                <span class="text-capitalize">{{ $item->company_officer }}</span>
+                                <span class="text-capitalize">{{ $item->firma }}</span>
                             </td>
                             <td>
-                                {{ $item->company_phone }}
+                                {{ $item->baslik }}
                             </td>
                             <td>
-                                {{ $item->company_email }}
+                                {{ $item->nereye }}
                             </td>
+                            <td>
+                                {{ $item->kime }}
+                            </td>
+
 
                             @if(auth()->user()->is_admin == 2)
                             <td>
@@ -146,7 +151,7 @@
 
                             </td>
                             <td>
-                                <a href="{{ route('teklif.edit', $item->id) }}"><x-icon.edit/></a>
+                                <a href="{{ route('sikayet.edit', $item->id) }}"><x-icon.edit/></a>
                             </td>
                         </tr>
                         <div class="modal modal-blur fade" id="silmeonayi{{ $item->id }}" tabindex="-1" role="dialog" aria-hidden="true">
@@ -180,7 +185,7 @@
                     </tbody>
                 </table>
 
-                <div class="col-12 col-md-12 mt-3">{{ $All->appends(['siralama' => 'teklif', 'liste' => request('liste'), 'q' => request('q')])->links() }}</div>
+                <div class="col-12 col-md-12 mt-3">{{ $All->appends(['siralama' => 'Şikayet', 'liste' => request('liste'), 'q' => request('q')])->links() }}</div>
             </div>
 
         </div>

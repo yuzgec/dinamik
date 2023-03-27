@@ -24,13 +24,33 @@ Route::post('/form', [HomeController::class, 'form'])->name('form');
 Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function() {
     Route::get('/', 'DashboardController@index')->name('go');
 
-    Route::get('/teklifler', 'DashboardController@teklifler')->name('teklifler');
-    Route::get('/teklif-olustur', 'DashboardController@teklifolustur')->name('teklifolustur');
-    Route::post('/teklifkaydet', 'DashboardController@teklifkaydet')->name('teklifkaydet');
-    Route::get('/teklifduzenle/{id}', 'DashboardController@teklifduzenle')->name('teklif.edit');
-    Route::put('/teklifduzenle/{id}', 'DashboardController@teklifduzenlepost')->name('teklif.update');
+    Route::get('/teklifler', 'OfferController@teklifler')->name('teklifler');
+    Route::get('/teklif-olustur', 'OfferController@teklifolustur')->name('teklifolustur');
+    Route::post('/teklifkaydet', 'OfferController@teklifkaydet')->name('teklifkaydet');
+    Route::get('/teklifduzenle/{id}', 'OfferController@teklifduzenle')->name('teklif.edit');
+    Route::put('/teklifduzenle/{id}', 'OfferController@teklifduzenlepost')->name('teklif.update');
 
-    Route::get('/email/{id}', 'DashboardController@emailGonder')->name('emailGonder');
+    Route::get('/email/{id}', 'OfferController@emailGonder')->name('emailGonder');
+
+    Route::get('/sablon' , 'OfferController@sablon')->name('sablon.index');
+    Route::get('/sablon-olustur' , 'OfferController@sabloncreate')->name('sablon.create');
+    Route::post('/sablon-olustur' , 'OfferController@sablonstore')->name('sablon.store');
+    Route::put('/sablon-duzenle/{id}' , 'OfferController@sablonedit')->name('sablon.edit');
+    Route::get('/sablon-onoff' , 'OfferController@getSwitch')->name('sablon.onoff');
+
+
+    Route::get('/sikayet' , 'ComplaintController@index')->name('sikayet.index');
+    Route::get('/sikayet-olustur' , 'ComplaintController@create')->name('sikayet.create');
+    Route::post('/sikayet-kaydet' , 'ComplaintController@store')->name('sikayet.store');
+    Route::get('/sikayet-duzenle/{id}' , 'ComplaintController@edit')->name('sikayet.edit');
+    Route::put('/sikayet-duzenle/{id}', 'OfferController@update')->name('sikayet.update');
+
+    Route::get('/kullanici' , 'OfferController@kullanici')->name('kullanici.index');
+    Route::get('/kullanici-olustur' , 'OfferController@kullanicicreate')->name('kullanici.create');
+    Route::post('/kullanici-olustur' , 'OfferController@kullanicistore')->name('kullanici.store');
+    Route::get('/kullanici-duzenle/{id}' , 'OfferController@kullaniciedit')->name('kullanici.edit');
+    Route::put('/kullanici-duzenle/{id}' , 'OfferController@kullaniciupdate')->name('kullanici.update');
+    Route::get('/kullanici-onoff' , 'OfferController@kullanicigetSwitch')->name('kullanici.onoff');
 
 
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

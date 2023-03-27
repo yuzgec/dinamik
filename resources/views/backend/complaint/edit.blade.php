@@ -1,15 +1,15 @@
 @extends('backend.layout.app')
-@section('title', 'Teklif Oluştur')
+@section('title', 'Şikayet Düzenle')
 @section('content')
-    <form method="post" action="{{ route('teklifkaydet') }}">
-        @csrf
+    {{Form::model($Edit, ["route" => ["teklif.update", $Edit->id],'enctype' => 'multipart/form-data'])}}
+    @method('PUT')
         <div class="col-12 col-md-12">
         <div class="card">
             <div class="card-header d-flex justify-content-between">
                 <div>
                     <h4 class="card-title">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                        Teklif Oluştur
+                        Şikayet Düzenle
                     </h4>
                 </div>
                 <div class="d-flex justify-content-between">
@@ -17,32 +17,31 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 18v-6a3 3 0 0 0 -3 -3h-10l4 -4m0 8l-4 -4" /></svg>
                         Geri
                     </a>
+
                 </div>
             </div>
 
             <div class="p-2">
-                <div class="form-group mb-3 row">
-                    <label class="form-label col-3 col-form-label">Şablon</label>
-                    <div class="col">
-                        <select name="liste" class="form-select" onchange="location = this.options[this.selectedIndex].value">
-                            <option>Şablon Seç</option>
-                            @foreach($Sablon as $item)
-                            <option value="{{ url()->current() }}?sablon={{ $item->id }}">{{ $item->title }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-                <x-form-inputtext label="Firma Adı" name="company_name"/>
-                <x-form-inputtext label="Firma Yetkilisi" name="company_officer"/>
-                <x-form-inputtext label="Firma Telefon" name="company_phone"/>
-                <x-form-inputtext label="Firma Email" name="company_email"/>
+                <x-form-inputtext label="Şikayet Numarası" name="sikayet_numarasi" id="input"/>
+                <x-form-inputtext label="Hangi Kurum" name="nereye"/>
+                <x-form-inputtext label="Hangi Bölüm" name="kime"/>
+
+                <x-form-inputtext label="SMS Başlık" name="baslik"/>
+                <x-form-inputtext label="Firma Adı" name="firma"/>
+                <x-form-inputtext label="Ad Soyad" name="adsoyad"/>
+                <x-form-inputtext label="Adres" name="adres"/>
+                <x-form-inputtext label="Vergi Daire" name="vergidaire"/>
+                <x-form-inputtext label="Vergi NO" name="vergino"/>
+                <x-form-inputtext label="Telefon" name="telefon"/>
+                <x-form-inputtext label="E-mail" name="email"/>
                 <div class="row">
                     <div class="col-3">
                         Teklif İçeriği
                     </div>
                     <div class="col-9">
                         <textarea label="Açıklama" name="desc" id="aciklama">
-                            {!! @$SablonSelect->content !!}
+
+                            {!! $Edit->text  !!}
                         </textarea >
                     </div>
                 </div>
@@ -66,7 +65,7 @@
                 { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold']},
                 { name: 'paragraph',items: [ 'BulletedList']},
                 { name: 'colors', items: [ 'TextColor' ]},
-                { name: 'styles', items: [ 'Format', 'FontSize']},
+                { name: 'styles', items: [ 'Format', 'FontSize','JustifyLeft', 'JustifyRight', 'JustifyCenter', 'JustifyBlock']},
                 { name: 'links', items : [ 'Link', 'Unlink'] },
                 { name: 'insert', items : [ 'Image', 'Table']},
                 { name: 'document', items : [ 'Source','Maximize' ]},
