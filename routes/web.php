@@ -37,8 +37,8 @@ Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function(
     Route::get('/sablon' , 'OfferController@sablon')->name('sablon.index');
     Route::get('/sablon-olustur' , 'OfferController@sabloncreate')->name('sablon.create');
     Route::post('/sablon-olustur' , 'OfferController@sablonstore')->name('sablon.store');
-    Route::put('/sablon-duzenle/{id}' , 'OfferController@sablonedit')->name('sablon.edit');
-    Route::get('/sablon-onoff' , 'OfferController@getSwitch')->name('sablon.onoff');
+    Route::get('/sablon-duzenle/{id}' , 'OfferController@sablonedit')->name('sablon.edit');
+    Route::post('/sablon-onoff' , 'OfferController@getSwitch')->name('sablon.onoff');
 
 
     Route::get('/sikayet' , 'ComplaintController@index')->name('sikayet.index');
