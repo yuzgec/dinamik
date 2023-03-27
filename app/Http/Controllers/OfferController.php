@@ -15,43 +15,22 @@ class OfferController extends Controller
 {
     public function teklifler(){
 
-        $bugun = date("Y-m-d");
-
-        if(request('filtre') ==  'dun'){
-            $test = strtotime('-1 day',strtotime($bugun));
-            $filtre = date("Y-m-d",$test);
-        }elseif(request('filtre') ==  'hafta'){
-            $test = strtotime('-1 week',strtotime($bugun));
-            $filtre =  date("Y-m-d",$test);
-        }elseif(request('filtre') ==  'ay'){
-            $test = strtotime('-1 mount',strtotime($bugun));
-            $filtre =  date("Y-m-d",$test);
-        }elseif(request('filtre') ==  'bugun'){
-            $filtre = date("Y-m-d");
-        }else{
-            $filtre = date("Y-m-d");
-        }
-
-        //dd($filtre);
-
         if (request()->filled('q') || request()->filled('filtre') || request()->filled('liste')){
             $All = Offer::where('company_name', 'like', '%'. request('q'). '%')
                 ->orWhere('company_officer', 'like', '%'. request('q'). '%')
                 ->orWhere('company_phone', 'like', '%'. request('q'). '%')
                 ->orWhere('company_email', 'like', '%'. request('q'). '%')
                 ->where('user_id', auth()->user()->id)
-                ->whereBetween('created_at', ['2023-03-26 00:50:58','2023-03-24 00:50:58'])
                 ->orderBy('created_at', 'desc')
                 ->paginate((request('liste')  ? request('liste') : 30));
         }elseif(auth()->user()->is_admin == 2){
             $All = Offer::with('getUser')->where('user_id', auth()->user()->id)
                 ->orderBy('created_at', 'desc')
                 ->paginate(30);
-            //dd($All);
         }else{
             $All = Offer::orderBy('created_at', 'desc')
                 ->with('getUser')
-                ->paginate((request('liste')  ? request('liste') : 30));
+                ->paginate(30);
         }
 
         return view('backend.offer.index', compact('All'));
@@ -87,8 +66,6 @@ class OfferController extends Controller
         alert()->success('Başarıyla Oluşturuldu','Teklif Başarıyla Oluşturuldu');
         return redirect()->route('teklifler');
 
-        //return $pdf->download($Detail->company_name.' Fiyat Teklifi.pdf')->header('Content-Type','application/pdf');;
-
     }
 
     public function teklifduzenle(Request $request,$id){
@@ -122,9 +99,6 @@ class OfferController extends Controller
 
         alert()->success('Başarıyla Güncellendi','Teklif Başarıyla Güncellendi');
         return redirect()->route('teklifler');
-
-        //return $pdf->download($Detail->company_name.' Fiyat Teklifi.pdf')->header('Content-Type','application/pdf');;
-
     }
 
     public function emailGonder($id){

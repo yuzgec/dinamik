@@ -13,26 +13,7 @@ class ComplaintController extends Controller
 {
     public function index(){
 
-        $bugun = date("Y-m-d");
-
-        if(request('filtre') ==  'dun'){
-            $test = strtotime('-1 day',strtotime($bugun));
-            $filtre = date("Y-m-d",$test);
-        }elseif(request('filtre') ==  'hafta'){
-            $test = strtotime('-1 week',strtotime($bugun));
-            $filtre =  date("Y-m-d",$test);
-        }elseif(request('filtre') ==  'ay'){
-            $test = strtotime('-1 mount',strtotime($bugun));
-            $filtre =  date("Y-m-d",$test);
-        }elseif(request('filtre') ==  'bugun'){
-            $filtre = date("Y-m-d");
-        }else{
-            $filtre = date("Y-m-d");
-        }
-
-        //dd($filtre);
-
-        if (request()->filled('q') || request()->filled('filtre') || request()->filled('liste')){
+        if (request()->filled('q') || request()->filled('liste')){
             $All = Complaint::where('sikayet_numarasi', 'like', '%'. request('q'). '%')
                 ->orWhere('adsoyad', 'like', '%'. request('q'). '%')
                 ->orWhere('telefon', 'like', '%'. request('q'). '%')
@@ -44,12 +25,11 @@ class ComplaintController extends Controller
             $All = Complaint::where('user_id', auth()->user()->id)
                 ->orderBy('created_at', 'desc')
                 ->where('user_id', auth()->user()->id)
-                ->paginate((request('liste')  ? request('liste') : 30));
+                ->paginate(30);
         }elseif(auth()->user()->is_admin == 2){
             $All = Complaint::with('getUser')
                 ->orderBy('created_at', 'desc')
                 ->paginate(30);
-            //dd($All);
         }
 
         return view('backend.complaint.index', compact('All'));
