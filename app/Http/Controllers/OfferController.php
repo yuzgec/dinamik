@@ -49,9 +49,8 @@ class OfferController extends Controller
                 ->paginate(30);
             //dd($All);
         }else{
-            $All = Offer::where('user_id', auth()->user()->id)
-                ->orderBy('created_at', 'desc')
-                ->where('user_id', auth()->user()->id)
+            $All = Offer::orderBy('created_at', 'desc')
+                ->with('getUser')
                 ->paginate((request('liste')  ? request('liste') : 30));
         }
 
