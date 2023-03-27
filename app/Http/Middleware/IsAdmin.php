@@ -10,7 +10,7 @@ class IsAdmin
 
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user() &&  auth()->user()->is_admin == 1 || auth()->user()->is_admin == 2) {
+        if (auth()->user() &&  auth()->user()->is_admin == 1 || auth()->user()->is_admin == 2 && auth()->user()->status == 1) {
             return $next($request);
         }
         return redirect('/')->with('error', 'Bu Alana Giriş Yapma Yetkiniz Yok');

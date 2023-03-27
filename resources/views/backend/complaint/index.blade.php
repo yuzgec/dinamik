@@ -94,7 +94,7 @@
                     @foreach($All as $item)
                         <tr>
                             <td>
-                                <a href="{{ url($item->file) }}?ver={{ rand(1,9) }}" target="_blank" title="{{str_replace('offer/','', $item->file)}}">
+                                <a href="{{ url($item->file) }}?ver={{ rand(1,9) }}" target="_blank" title="{{str_replace('complaint/','', $item->file)}}">
                                    @if($item->id%2==0 )
                                     <x-icon.download-black/>
                                    @else

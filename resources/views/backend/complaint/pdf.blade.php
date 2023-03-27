@@ -18,7 +18,13 @@
         }
 
         p{
-            font-size: 14px;
+            font-size: 16px;
+            letter-spacing: .5px;
+            line-height: 15px;
+        }
+
+        ul li{
+            font-size: 16px;
             letter-spacing: .5px;
             line-height: 15px;
         }
@@ -53,14 +59,13 @@
        <div class="text-center">Tarih : {{ \Carbon\Carbon::parse($Detail->created_at)->format('d/m/Y')}}</div>
 
        <div>
-           <div style="margin-top:50px">
-               <h5 class="text-center mt-3">T.C.</h5>
-               <h5 class="text-center">{{ $Detail->kime }}</h5>
-               <h5 class="text-center">{{ $Detail->nereye }}</h5>
-
+           <div style="margin-top:150px" >
+               <h5 class="text-center mt-3" style="line-height: 1.2rem">T.C.<br>
+               {{ $Detail->kime }}<br>
+               {{ $Detail->nereye }}</h5>
            </div>
 
-           <div style="margin-top:20px">
+           <div style="margin-top:40px">
                {!! mb_convert_encoding($Detail->text, 'HTML-ENTITIES', 'UTF-8') !!}
            </div>
             <br><br><br>
@@ -68,10 +73,12 @@
                <li>Başlık : {{ $Detail->baslik }}</li>
                <li>Firma : {{ $Detail->firma }}</li>
                <li>Ad Soyad : {{ $Detail->adsoyad }}</li>
-               <li>VD. : {{ $Detail->vergidaire }}</li>
-               <li>VD N0 : {{ $Detail->vergino }}</li>
+               <li>Adres : {{ $Detail->adres }}</li>
                <li>Telefon : {{ $Detail->telefon }}</li>
                <li>Email : {{ $Detail->email }}</li>
+               <li>VD. : {{ $Detail->vergidaire }}</li>
+               <li>VD N0 : {{ $Detail->vergino }}</li>
+
            </ul>
 
        </div>

@@ -3,6 +3,8 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
+
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/iletisim', [HomeController::class, 'contactus'])->name('contactus');
 Route::get('/fiyatlar', [HomeController::class, 'price'])->name('price');
