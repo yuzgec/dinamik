@@ -26,7 +26,7 @@
         ul li{
             font-size: 16px;
             letter-spacing: .5px;
-            line-height: 15px;
+            line-height: 20px;
         }
 
         .footer {
