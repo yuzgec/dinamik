@@ -33,7 +33,7 @@ class ComplaintController extends Controller
         //dd($filtre);
 
         if (request()->filled('q') || request()->filled('filtre') || request()->filled('liste')){
-            $All = Complaint::where('company_name', 'like', '%'. request('q'). '%')
+            $All = Complaint::where('sikayet_numarasi', 'like', '%'. request('q'). '%')
                 ->orWhere('adsoyad', 'like', '%'. request('q'). '%')
                 ->orWhere('telefon', 'like', '%'. request('q'). '%')
                 ->orWhere('firma', 'like', '%'. request('q'). '%')
