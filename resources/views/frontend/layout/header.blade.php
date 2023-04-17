@@ -97,7 +97,7 @@
                         <li><a href="{{ route('contactus') }}">İletişim</a></li>
                         <li class="has-submenu"> <a href="#" >Abone Menu</a>
                             <ul><li><a href="http://panel.dinamiksms.com.tr/" target="_blank">Abone Girişi</a></li>
-                                <li><a href="https://www.awesomescreenshot.com/video/16322171?key=03d9596584dd5cfb24b08b58342ef94b" target="_blank">Kullanım Klavuzu<br> <span class="text-center">(Video İzle)</span></a></li>
+                                <li><a href="https://www.awesomescreenshot.com/video/16322171?key=03d9596584dd5cfb24b08b58342ef94b" target="_blank">Kullanım Klavuzu<br> <span class="text-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Video İzle)</span></a></li>
                             </ul>
 
                         </li>
