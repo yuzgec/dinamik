@@ -105,11 +105,9 @@ class OfferController extends Controller
         DB::transaction(function() use ($id){
             $Email = Offer::where('id', $id)->first();
             Mail::send('mail.form', compact('Email'), function ($message) use ($Email) {
-
-                $url = (config('app.env') == 'local') ? public_path($Email->file) : url($Email->file);
                 $message->to($Email->company_email)
                     ->subject('Syn. ' . $Email->company_officer . ' ' . 'Dinamik SMS Fiyat Teklifi')
-                    ->attach($url);
+                    ->attach(url($Email->file));
             });
             $Update = Offer::where('id',$id)->update(['send_email' => 1, 'emailCount' => +1]);
         });
