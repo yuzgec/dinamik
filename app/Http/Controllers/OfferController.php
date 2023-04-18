@@ -106,7 +106,7 @@ class OfferController extends Controller
             $Email = Offer::where('id', $id)->first();
             Mail::send('mail.form', compact('Email'), function ($message) use ($Email) {
 
-                $url =  public_path().$Email->file;
+                $url =  public_path().'/'.$Email->file;
                 $message->to($Email->company_email)
                     ->subject('Syn. ' . $Email->company_officer . ' ' . 'Dinamik SMS Fiyat Teklifi')
                     ->attach($url);
