@@ -7,7 +7,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-8 col-md-6">
                         <div class="git-left">
-                            <h4 class="text-white">Hizmetlerimizden faydalanmak için hemen arayın!</h4>
+                            <h4 class="text-white">Hizmetlerimizden faydalanmak için hemen arayın! </h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
