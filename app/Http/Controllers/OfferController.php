@@ -151,6 +151,7 @@ class OfferController extends Controller
         $Update->title = $request->title;
         $Update->content = $request->text;
         $Update->save();
+
         toast(SWEETALERT_MESSAGE_UPDATE, 'success');
         return redirect()->route('sablon.index');
 

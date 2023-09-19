@@ -27,7 +27,7 @@
                 </div>
                 <div class="card-body">
                     <x-form-inputtext label="Şablon Adı Giriniz" name="title"/>
-                    <x-form-textarea label="Şablon İçeriği" name="content" />
+                    <x-form-textarea label="Şablon İçeriği" name="text" />
                 </div>
             </div>
         </div>
