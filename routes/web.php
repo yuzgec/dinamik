@@ -38,6 +38,7 @@ Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function(
     Route::get('/sablon-olustur' , 'OfferController@sabloncreate')->name('sablon.create');
     Route::post('/sablon-olustur' , 'OfferController@sablonstore')->name('sablon.store');
     Route::get('/sablon-duzenle/{id}' , 'OfferController@sablonedit')->name('sablon.edit');
+    Route::put('/sablon-duzenle/{id}', 'OfferController@sablonupdate')->name('sablon.update');
     Route::post('/sablon-onoff' , 'OfferController@getSwitch')->name('sablon.onoff');
 
 
