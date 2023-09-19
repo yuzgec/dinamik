@@ -149,7 +149,7 @@ class OfferController extends Controller
 
         $Update = OfferTheme::where('id', $id)->first();
         $Update->title = $request->title;
-        $Update->content = $request->text;
+        $Update->content = $request->content;
         $Update->save();
 
         toast(SWEETALERT_MESSAGE_UPDATE, 'success');
